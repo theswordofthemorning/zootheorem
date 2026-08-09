@@ -1,0 +1,185 @@
+OEIS SUBMISSION DRAFTS -- zootheorem (2026-08-09)
+==================================================
+Four sequences, to be submitted in this order (seq 2 references the
+A-number that seq 1 receives as a draft). Author line is filled by the
+OEIS account. Checked against OEIS on 2026-08-09: none present
+(control query returned A000045).
+
+------------------------------------------------------------------
+SEQUENCE 1 -- merging classes, Collatz (the flagship)
+------------------------------------------------------------------
+NAME:
+Number of residues r in [0, 2^n) such that the trajectories of r and
+r+1 under the shortcut Collatz map (x/2 if x even, (3x+1)/2 if x odd)
+satisfy T^n(r) = T^n(r+1) and contain the same number of odd terms
+among the first n iterates.
+
+DATA (offset 1):
+0, 0, 1, 3, 8, 18, 39, 82, 170, 351, 721, 1476, 3012, 6130, 12450,
+25241, 51105, 103358, 208840, 421643, 850737, 1715546, 3457791,
+6966495, 14030369, 28247507, 56854178, 114400435, 230136995,
+462857658, 930718308, 1871137623, 3761106610, 7558807251,
+15188796435, 30516174184
+
+OFFSET: 1,4
+
+COMMENTS:
+By Terras's theorem (Acta Arith. 30, 1976) the first n parities of a
+trajectory depend only on the residue mod 2^n and T^n(2^n*m + r) =
+3^s*m + T^n(r) with s the number of odd steps of r; hence the counted
+condition holds for the entire residue class: every pair (2^n*m + r,
+2^n*m + r + 1) with m >= 1 in a counted class merges, and both members
+have equal total stopping time whenever the merged trajectory reaches
+1 (unconditionally true below 2^71, Barina 2025).
+a(n+1) >= 2*a(n) for all n (proof: with m = 1 in Terras's identity,
+r and r + 2^n both inherit the property). Hence a(n)/2^n is
+nondecreasing, and each value is a proven lower bound for the lower
+density of pairs of consecutive integers with equal Collatz height:
+a(32)/2^32 = 0.435658..., by exact integer computation over all 2^32
+residues (no sampling).
+The class r = 4 mod 8 (n = 3) is Garner's pair (8k+4, 8k+5) [Garner
+1985]; the class r = 5 mod 32 (n = 5) is the family (32m+5, 32m+6) of
+Wu and Huang [2001].
+The map (3x-1)/2 yields the identical sequence for all n: negation
+conjugates the two maps and the reflection r -> 2^n - 1 - r maps one
+counted set onto the other (machine-checked proof in Lean 4 at the
+link below).
+
+LINKS:
+theswordofthemorning, Statements, proofs and verification scripts,
+https://github.com/theswordofthemorning/zootheorem
+(b-file to be uploaded: seqs/bfile_merging_classes_3x1.txt, n = 1..36)
+
+FORMULA:
+a(n+1) >= 2*a(n).
+
+EXAMPLE:
+a(3) = 1: the residue r = 4 satisfies T^3(4) = T^3(5) = 2 with one
+odd step on each side (4 -> 2 -> 1 -> 2 and 5 -> 8 -> 4 -> 2), so the
+whole class (8m+4, 8m+5) merges in 3 steps.
+
+PROG:
+(Python)
+def a(n):
+    c = 0
+    for r in range(2**n):
+        x, y, sx, sy = r, r+1, 0, 0
+        for _ in range(n):
+            sx += x & 1; sy += y & 1
+            x = (3*x+1)//2 if x & 1 else x//2
+            y = (3*y+1)//2 if y & 1 else y//2
+            if x == y:
+                c += sx == sy
+                break
+    return c
+
+CROSSREFS:
+Cf. A076227, A100982, A006877. First differences a(n+1) - 2*a(n) are
+[SEQUENCE 2].
+
+KEYWORDS: nonn
+
+------------------------------------------------------------------
+SEQUENCE 2 -- the new classes
+------------------------------------------------------------------
+NAME:
+a(n) = A??????(n+1) - 2*A??????(n)  [A-number of SEQUENCE 1], the
+number of residue classes mod 2^(n+1) of merging consecutive Collatz
+pairs that are not inherited by doubling from level n.
+
+DATA (offset 1):
+0, 1, 1, 2, 2, 3, 4, 6, 11, 19, 34, 60, 106, 190, 341, 623, 1148,
+2124, 3963, 7451, 14072, 26699, 50913, 97379, 186769, 359164, 692079,
+1336125, 2583668, 5002992, 9701007, 18831364, 36594031, 71181933,
+138581314
+
+OFFSET: 1,4
+
+COMMENTS:
+Nonnegative for all n because A??????(n+1) >= 2*A??????(n) (proved).
+a(n) >= 1 for all even n+2 (the pair (2^j - 2, 2^j - 1) merges for the
+first time at step j+2 for every even j, with the merge point at the
+ternary repunit (3^(j-1)-1)/2), so new classes never stop appearing.
+The ratio a(n+1)/a(n) increases towards 2 on the computed range
+(1.9469 at n = 35); whether it reaches 2 is equivalent to whether the
+proven density bound of A?????? converges to the full density.
+
+LINKS:
+theswordofthemorning, Statements, proofs and verification scripts,
+https://github.com/theswordofthemorning/zootheorem
+(b-file: seqs/bfile_new_classes_3x1.txt, n = 1..35)
+
+CROSSREFS: Cf. A??????  [SEQUENCE 1], A076227.
+
+KEYWORDS: nonn
+
+------------------------------------------------------------------
+SEQUENCE 3 -- merging classes for (5x+1)/2
+------------------------------------------------------------------
+NAME:
+Number of residues r in [0, 2^n) such that the trajectories of r and
+r+1 under the map x -> x/2 if x even, (5x+1)/2 if x odd, satisfy
+T^n(r) = T^n(r+1) and contain the same number of odd terms among the
+first n iterates.
+
+DATA (offset 1):
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 3, 11, 28, 70, 161, 370, 835, 1840,
+4021, 8621, 18401
+
+OFFSET: 1,12
+
+COMMENTS:
+The analog of A?????? [SEQUENCE 1] for the 5x+1 map. No convergence
+assumption is involved: merging at the same step index with equal odd
+count is a finite event decided by the residue class (Terras's
+argument uses only the parity structure, valid for every map
+(q*x+1)/2 with q odd), so the count is well defined even though 5x+1
+trajectories are believed to diverge. The density a(n)/2^n at n = 22
+is 0.0044, against 0.409 for the Collatz map: writing the evolution of
+the difference of a pair on equal-parity steps as multiplication by
+1/2 (both even) or q/2 (both odd), the expected multiplier is
+(1+q)/4, which equals 1 only for q = 3 -- among the maps (q*x+1)/2
+the Collatz map is the unique critical one, and the collapse of this
+density for q = 5 is the supercritical regime.
+
+LINKS:
+theswordofthemorning, Statements, proofs and verification scripts,
+https://github.com/theswordofthemorning/zootheorem
+(b-file: seqs/bfile_merging_classes_5x1.txt, n = 1..22)
+
+CROSSREFS: Cf. A?????? [SEQUENCE 1], A?????? [SEQUENCE 4].
+
+KEYWORDS: nonn,more
+
+------------------------------------------------------------------
+SEQUENCE 4 -- merging classes for (7x+1)/2
+------------------------------------------------------------------
+NAME:
+Number of residues r in [0, 2^n) such that the trajectories of r and
+r+1 under the map x -> x/2 if x even, (7x+1)/2 if x odd, satisfy
+T^n(r) = T^n(r+1) and contain the same number of odd terms among the
+first n iterates.
+
+DATA (offset 1):
+0, 0, 0, 1, 2, 5, 11, 23, 48, 99, 203, 413, 838, 1694, 3419, 6881,
+13843, 27811, 55818, 111980, 224511, 449933
+
+OFFSET: 1,5
+
+COMMENTS:
+The analog of A?????? [SEQUENCE 1] for the 7x+1 map; see SEQUENCE 3
+for why the count is well defined without any convergence assumption.
+Density at n = 22: 0.107, nearly flat on the computed range.
+For maps (q*x+r)/2 with an odd prime p dividing r but not q the
+corresponding count is 0 for every n: mod p the map is multiplication
+by units, and equal step and odd counts force r == r+1 (mod p), which
+is impossible. (Tested on (5x+3)/2, (7x+3)/2, (3x+5)/2.)
+
+LINKS:
+theswordofthemorning, Statements, proofs and verification scripts,
+https://github.com/theswordofthemorning/zootheorem
+(b-file: seqs/bfile_merging_classes_7x1.txt, n = 1..22)
+
+CROSSREFS: Cf. A?????? [SEQUENCE 1], A?????? [SEQUENCE 3].
+
+KEYWORDS: nonn,more
