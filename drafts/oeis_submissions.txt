@@ -1,8 +1,12 @@
 OEIS SUBMISSION DRAFTS -- zootheorem (2026-08-09)
 ==================================================
-Four sequences, to be submitted in this order (seq 2 references the
-A-number that seq 1 receives as a draft). Author line is filled by the
-OEIS account. Checked against OEIS on 2026-08-09: none present
+Four sequences. A-numbers allocated 2026-08-09: A398792 (Collatz a),
+A398793 (new classes b), A398794 (5x+1), A398795 (7x+1).
+STATUS 2026-08-09: A398792, A398793, A398794 submitted and PROPOSED
+(A398793 re-proposed after replying to Michel Marcus's "data needs
+more terms" -- all 35 known terms are in DATA; see draft discussion).
+A398795 allocated but NOT yet submitted: OEIS limits new accounts to
+3 active drafts; submit it when a slot frees using the text below. Checked against OEIS on 2026-08-09: none present
 (control query returned A000045).
 
 ------------------------------------------------------------------
@@ -83,7 +87,7 @@ KEYWORDS: nonn
 SEQUENCE 2 -- the new classes
 ------------------------------------------------------------------
 NAME:
-a(n) = A??????(n+1) - 2*A??????(n)  [A-number of SEQUENCE 1], the
+a(n) = A398792(n+1) - 2*A398792(n), the
 number of residue classes mod 2^(n+1) of merging consecutive Collatz
 pairs that are not inherited by doubling from level n.
 
@@ -109,7 +113,7 @@ theswordofthemorning, Statements, proofs and verification scripts,
 https://github.com/theswordofthemorning/zootheorem
 (b-file: seqs/bfile_new_classes_3x1.txt, n = 1..35)
 
-CROSSREFS: Cf. A??????  [SEQUENCE 1], A076227.
+CROSSREFS: Cf. A398792, A076227.
 
 KEYWORDS: nonn
 
@@ -129,7 +133,7 @@ DATA (offset 1):
 OFFSET: 1,12
 
 COMMENTS:
-The analog of A?????? [SEQUENCE 1] for the 5x+1 map. No convergence
+The analog of A398792 for the 5x+1 map. No convergence
 assumption is involved: merging at the same step index with equal odd
 count is a finite event decided by the residue class (Terras's
 argument uses only the parity structure, valid for every map
@@ -147,7 +151,7 @@ theswordofthemorning, Statements, proofs and verification scripts,
 https://github.com/theswordofthemorning/zootheorem
 (b-file: seqs/bfile_merging_classes_5x1.txt, n = 1..22)
 
-CROSSREFS: Cf. A?????? [SEQUENCE 1], A?????? [SEQUENCE 4].
+CROSSREFS: Cf. A398792, A398795.
 
 KEYWORDS: nonn,more
 
@@ -167,7 +171,7 @@ DATA (offset 1):
 OFFSET: 1,5
 
 COMMENTS:
-The analog of A?????? [SEQUENCE 1] for the 7x+1 map; see SEQUENCE 3
+The analog of A398792 for the 7x+1 map; see SEQUENCE 3
 for why the count is well defined without any convergence assumption.
 Density at n = 22: 0.107, nearly flat on the computed range.
 For maps (q*x+r)/2 with an odd prime p dividing r but not q the
@@ -180,6 +184,6 @@ theswordofthemorning, Statements, proofs and verification scripts,
 https://github.com/theswordofthemorning/zootheorem
 (b-file: seqs/bfile_merging_classes_7x1.txt, n = 1..22)
 
-CROSSREFS: Cf. A?????? [SEQUENCE 1], A?????? [SEQUENCE 3].
+CROSSREFS: Cf. A398792, A398794.
 
 KEYWORDS: nonn,more
