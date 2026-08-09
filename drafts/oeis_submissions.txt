@@ -100,13 +100,13 @@ DATA (offset 1):
 OFFSET: 1,4
 
 COMMENTS:
-Nonnegative for all n because A??????(n+1) >= 2*A??????(n) (proved).
+Nonnegative for all n because A398792(n+1) >= 2*A398792(n) (proved).
 a(n) >= 1 for all even n+2 (the pair (2^j - 2, 2^j - 1) merges for the
 first time at step j+2 for every even j, with the merge point at the
 ternary repunit (3^(j-1)-1)/2), so new classes never stop appearing.
 The ratio a(n+1)/a(n) increases towards 2 on the computed range
 (1.9469 at n = 35); whether it reaches 2 is equivalent to whether the
-proven density bound of A?????? converges to the full density.
+proven density bound of A398792 converges to the full density.
 
 LINKS:
 theswordofthemorning, Statements, proofs and verification scripts,
