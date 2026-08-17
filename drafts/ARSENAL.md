@@ -1,4 +1,4 @@
-# EL ARSENAL — sucesiones verificadas listas para OEIS (09-08-2026)
+# EL ARSENAL — sucesiones verificadas listas para OEIS (09-08-2026; actualizado 16-08-2026)
 
 ## El flujo de OEIS, en cinco líneas (pillarle la mano)
 
@@ -21,14 +21,68 @@
 
 | A-number | qué | estado |
 |---|---|---|
-| A398792 | a(n) fusión Collatz, 36 términos | proposed (2ª ronda, correcciones de Marcus aplicadas) |
-| A398793 | b(n) las nuevas, 35 términos | proposed (respondido «more terms») |
-| A398794 | (5x+1)/2, 22 términos | proposed |
+| A398792 | a(n) fusión Collatz, 36 términos | proposed (16-08: 2ª ronda editorial aplicada — Marcus + Irvine) |
+| A398793 | b(n) las nuevas, 35 términos | proposed (16-08: ídem; nombre reescrito autocontenido) |
+| A398794 | (5x+1)/2, 22 términos | proposed (16-08: ídem; jerga fuera) |
+
+## LA 2ª RONDA EDITORIAL (16-08-2026) — qué pidieron y qué se cambió
+
+**Sean A. Irvine comentó los tres en doce minutos** (18:42–18:54 EDT) y
+con ello **devolvió los tres de `proposed` a `editing`**. Contestados y
+re-propuestos la misma noche. **Ni una sola objeción matemática en las
+dos rondas y con dos editores**: datos, definición, programas y novedad
+no fueron cuestionados por nadie. Todo fue redacción.
+
+| entrada | lo que pidió | lo que se cambió |
+|---|---|---|
+| A398792 | «"shortcut Collatz map" is not standard terminology in the OEIS, call it the "Collatz map (A014682)"» | NAME reescrito con `Collatz map T (A014682)` y los dos casos explícitos; `proved` fuera de FORMULA y del 2º comentario; dos comentarios nuevos (relevancia al 3x+1; por qué los términos paran donde paran) |
+| A398793 | nombre poco claro, «what is Terras's identity», relevancia, y no escribir «proved» | NAME autocontenido (dice la condición de fusión en vez de suponer la frase) con la fórmula al final; identidad de Terras ENUNCIADA en vez de citada; `proved` fuera de sus dos apariciones; comentario de relevancia |
+| A398794 | relevancia y «avoid jargon like "supercritical regime"» | el 2º comentario dice el mecanismo en llano (multiplicador esperado `(1+q)/4`, mayor que 1 desde `q >= 5`); comentario de relevancia |
+
+**El matiz del nombre de A398793, declarado al editor en la nota:** el
+prefijo con la fórmula lo abría en el envío original y **lo quitó Marcus
+en la 1ª ronda**; Irvine pidió después claridad. Dos editores con
+indicaciones opuestas: se puso la fórmula al final (donde define y no
+reemplaza a la descripción) y **se le dijo a Irvine que decida**. Oscilar
+en silencio entre dos editores es peor que nombrar el conflicto.
+
+## LAS REGLAS DE ESTILO DE OEIS, aprendidas en la práctica
+
+1. **El mapa del atajo ES A014682** («The Collatz or 3x+1 function:
+   a(n) = n/2 if n is even, otherwise (3n+1)/2»), y su propio comentario
+   dice que es la `T` habitual de la literatura. Citarlo por A-number:
+   «shortcut Collatz map» no es terminología de la casa.
+2. **No escribir «proved»**: en OEIS todo se supone demostrado salvo
+   aviso en contra. **Pero el cualificador REAL se queda** — «unconditionally
+   true for all values below 2^71» no es una etiqueta de orgullo, es una
+   condición verdadera. La distinción es esa: insignia fuera, condición
+   dentro.
+3. **Nada de jerga.** «Supercritical regime» fuera; el mecanismo dicho en
+   llano.
+4. **Toda entrada tiene que contestar «¿qué aporta esto al 3x+1?»** — lo
+   preguntó dos veces. Y la respuesta honesta **incluye el límite**: que
+   `(3x-1)/2` da la misma sucesión y por tanto no es evidencia sobre la
+   conjetura. Declarar el límite propio suma credibilidad; esconderlo la
+   resta.
+5. **En la caja COMMENTS cada LÍNEA es un comentario.** Nada de líneas en
+   blanco entre ellos: se cuelan como comentarios vacíos.
+6. **La nota de discusión se adjunta al pulsar «ready for review»**, no
+   antes.
+7. **⇢ LA REGLA OPERATIVA QUE MÁS IMPORTA:** un comentario de editor
+   **devuelve el draft a `editing`**, y ahí se queda **congelado hasta que
+   el autor re-propone**. Nadie lo vuelve a mirar solo. **El riesgo no es
+   el rechazo: es la deriva.** Si pasan ~2 semanas sin comentario, el
+   movimiento correcto es un empujón cortés en la caja de discusión, no
+   re-proponer.
 
 ## En recámara (texto listo, esperando slot)
 
 - **A398795** — (7x+1)/2, 22 términos. Texto completo en
-  `PENDING_A398795.md`. Primera en recargar.
+  `PENDING_A398795.md`. Primera en recargar. **Sigue bloqueada al
+  16-08**: los tres slots continúan ocupados (una aprobación libera el
+  suyo al instante). **Reloj de la reserva**: el A-number se asignó el
+  09-08 y la reserva dura ~1 mes — vence alrededor del **09-09-2026**;
+  si expira se pide otro número y se ajustan las referencias cruzadas.
 
 ## El cargador de reserva (verificadas, NO catalogadas — comprobado
 ## contra OEIS con control durante las sesiones del repo)

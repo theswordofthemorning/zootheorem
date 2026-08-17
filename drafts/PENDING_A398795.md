@@ -1,11 +1,24 @@
 # A398795 — pendiente de envío (bloqueada por el límite de drafts)
 
-**Estado (2026-08-09):** el A-number **A398795** está reservado para
-Omar Said, pero OEIS limita a **3 drafts activos** las cuentas nuevas
-y los tres slots están ocupados por A398792, A398793 y A398794
-(las tres propuestas, esperando revisión). La reserva dura
-aproximadamente un mes; si expira, se pide otro número en
-<https://oeis.org/edit/allocate> y se ajustan las referencias cruzadas.
+**Estado (2026-08-16):** sigue bloqueada. El A-number **A398795** está
+reservado para Omar Said, pero OEIS limita a **3 drafts activos** las
+cuentas nuevas y los tres slots siguen ocupados por A398792, A398793 y
+A398794 — las tres **re-propuestas el 16-08** tras aplicar la segunda
+ronda editorial (Sean A. Irvine; ver `ARSENAL.md`). Ninguna aprobada
+todavía, así que no se ha liberado ningún slot.
+
+**Reloj de la reserva:** el número se asignó el 09-08 y la reserva dura
+aproximadamente un mes, o sea vence hacia el **09-09-2026**. Si expira,
+se pide otro en <https://oeis.org/edit/allocate> y se ajustan las
+referencias cruzadas.
+
+**Al cargarla, aplicar de nacimiento las reglas de estilo que costó
+aprender** (lista completa en `ARSENAL.md`): decir «Collatz map
+(A014682)» y no «shortcut Collatz map», nada de la palabra «proved»,
+nada de jerga, y un comentario que diga qué aporta al problema 3x+1
+**incluyendo su límite**. El texto de abajo es de antes de esas
+lecciones: el segundo comentario ya cumple, pero **conviene releerlo
+con esa lista al lado antes de pegarlo**.
 
 ## Cómo enviarla cuando se libere un slot
 

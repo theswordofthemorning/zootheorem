@@ -4,7 +4,8 @@
 
 ## Definition
 
-Let `T` be the shortcut Collatz map: `T(x) = x/2` for even `x`,
+Let `T` be the shortcut Collatz map (OEIS A014682, the function usually
+denoted `T` in the 3x+1 literature): `T(x) = x/2` for even `x`,
 `T(x) = (3x+1)/2` for odd `x`. For `n ≥ 1` and a residue
 `r ∈ [0, 2^n)`, write `S_n(r)` for the number of odd iterates among
 `r, T(r), …, T^{n-1}(r)`.
@@ -110,5 +111,5 @@ any counted quantity.
 - M. Elia and C. Tucker, INTEGERS 15 (2015), #A54.
 - D. Barina, *Convergence verification of the Collatz problem*,
   J. Supercomputing (2025). (Source of the `2^71` bound.)
-- Related OEIS entries: A076227 (surviving Collatz residues mod 2^n),
-  A006877, A100982.
+- Related OEIS entries: A014682 (the map `T` itself), A076227
+  (surviving Collatz residues mod 2^n), A006877, A100982.
