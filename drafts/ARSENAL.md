@@ -106,3 +106,22 @@ reserva — 12-08-2026: entraron los tres estratos e8/e10/e12 y se
 fusionaron la ex-#4 y la ex-#9, que eran la misma serie). Regla antes de cargar cualquiera: re-consultar OEIS ESE DÍA
 con control (Fibonacci → A000045), definición sin revelar el método
 interno, programa de fuerza bruta en la entrada, y b-file.
+
+---
+
+## Actualizacion 10-09-2026
+
+A398792, A398793, A398794 y A398795 estan aprobadas. El lote nuevo NO las
+duplica: queda como reserva editorial en estos cinco archivos:
+
+| archivo | sucesion | verificacion |
+|---|---|---|
+| `A398XXX1.txt` | `G(n)` de la identidad de renovacion | `python identidadexacta.py`; busqueda OEIS sin resultados el 10-09-2026 |
+| `A398XXX2.txt` | `H(n)` de la identidad de renovacion | `python identidadexacta.py`; busqueda OEIS sin resultados el 10-09-2026 |
+| `A398XXX3.txt` | estrato `e8` de la cadena `(k,c)` | `python estratoscadena.py`; busqueda OEIS sin resultados el 10-09-2026 |
+| `A398XXX4.txt` | estrato `e10` de la cadena `(k,c)` | `python estratoscadena.py`; busqueda OEIS sin resultados el 10-09-2026 |
+| `A398XXX5.txt` | estrato `e12` de la cadena `(k,c)` | `python estratoscadena.py`; busqueda OEIS sin resultados el 10-09-2026 |
+
+Antes de enviar cualquiera: reservar A-number real, reemplazar todos los
+`A398XXX*` cruzados, re-consultar OEIS ese mismo dia, y mantener los offsets del
+borrador salvo que una verificacion nueva obligue a cambiarlos.

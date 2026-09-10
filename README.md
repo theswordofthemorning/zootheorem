@@ -22,6 +22,7 @@ scripts). The research programme behind them is not published here.
 | `papers/03-uniform-fractional-moment-bound.md` | A self-contained lemma: uniform-in-time fractional moment bounds for critical random affine recursions (E[multiplier] = 1), with explicit constants, by subadditivity alone. |
 | `seqs/` | Sequence data in b-file format (`n a(n)` per line). |
 | `verify/` | Stand-alone brute-force verification scripts (Python 3, no dependencies). They recompute the sequences from the raw definition and exit with an error on any mismatch. |
+| `drafts/` | OEIS submission notes and reserve drafts. The `A398XXX*.txt` files are placeholders for future A-numbers and must be edited after allocation. |
 | `lean/mirror_theorem.lean` | The mirror theorem (a₊(n) = a₋(n) for all n) formally proved in Lean 4, core only (no Mathlib), zero `sorry`. Comments in Spanish; the statement and proof are machine-checked. |
 
 ## How to verify
@@ -39,3 +40,12 @@ are part of the text: **proved** (with the proof, or machine-checked in
 Lean), **computed exactly** (integer computation, no sampling, with the
 range stated), or **measured** (with the range and the estimator
 stated). Nothing is extrapolated.
+
+## OEIS workflow notes
+
+As of 2026-09-10, A398792 through A398795 have been approved. Reserve
+drafts for later submissions live in `drafts/A398XXX1.txt` through
+`drafts/A398XXX5.txt`; they cover the renewal identity sequences `G` and `H`
+and the chain strata `e8`, `e10`, and `e12`. Before submitting any draft,
+replace placeholder cross-references with real A-numbers, rerun the relevant
+verification script, and search OEIS again on the submission day.

@@ -1,0 +1,34 @@
+﻿%I A398XXX1
+%S 0,0,0,0,1,5,16,44,110,259,588,1302
+%N In the renewal identity for Collatz merging classes, number of reduced g-branch classes at level n.
+%C Let T be the Collatz map (A014682): T(x) = x/2 if x is even, T(x) = (3*x+1)/2 if x is odd. Let A(n) be the number of residues r, 0 <= r < 2^n, such that T^n(r) = T^n(r+1) and the first n iterates of r and r+1 contain the same number of odd terms (A398792).
+%C For n >= 3 the verified finite identity is A(n+2) = A(n) + (2^n - 1) + G(n) + H(n). This sequence is G(n), the contribution of the even-residue branch with at least four mixed-parity steps.
+%C Equivalently, G(n) is the cumulative count of reduced classes w modulo 2^m, m < n, for which the pair {w, 9*w + 2} merges within m steps of T with odd-count difference +2.
+%C Checked against OEIS on Sep 10 2026 with the displayed terms: no results.
+%H Omar Said, <a href="https://github.com/theswordofthemorning/conjeturadecollazpython/blob/main/identidadexacta.py">Verification script for the renewal identity</a>
+%H Omar Said, <a href="https://github.com/theswordofthemorning/zootheorem">Statements, proofs, sequence data and verification scripts</a>
+%F A(n+2) = A(n) + (2^n - 1) + a(n) + H(n), where A(n) is A398792 and H(n) is the companion h-branch sequence.
+%e a(7) = 1: at level 7 the even branch first contributes one reduced g-class beyond the |M| = 2 window.
+%o # Python
+%o def step(x):
+%o     return (3*x + 1)//2 if x % 2 else x//2
+%o def merges_reduced(c, m):
+%o     vals = []
+%o     for w in (c if c else (2**m)*2*999999, c + (2**m)*999999):
+%o         x, y = w, 9*w + 2
+%o         sx = sy = 0
+%o         ok = False
+%o         for _ in range(m):
+%o             sx += x & 1; sy += y & 1
+%o             x, y = step(x), step(y)
+%o             if x == y:
+%o                 ok = (sx - sy == 2); break
+%o         vals.append(ok)
+%o     assert vals[0] == vals[1]
+%o     return vals[0]
+%o def a(n):
+%o     return sum(sum(merges_reduced(c, m) for c in range(2**m)) for m in range(n))
+%Y Cf. A398792, A398793.
+%K nonn,more
+%O 3,5
+%A _Omar Said_, Sep 10 2026
