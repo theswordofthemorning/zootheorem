@@ -43,9 +43,13 @@ stated). Nothing is extrapolated.
 
 ## OEIS workflow notes
 
-As of 2026-09-10, A398792 through A398795 have been approved. Reserve
-drafts for later submissions live in `drafts/A398XXX1.txt` through
-`drafts/A398XXX5.txt`; they cover the renewal identity sequences `G` and `H`
-and the chain strata `e8`, `e10`, and `e12`. Before submitting any draft,
-replace placeholder cross-references with real A-numbers, rerun the relevant
-verification script, and search OEIS again on the submission day.
+A398792 through A398795 are approved and published. On 2026-09-12 the three
+chain strata were submitted and are `proposed`: A399819 (`e8`), A399820
+(`e10`) and A399821 (`e12`), whose submitted text is kept verbatim in
+`drafts/A399819.txt`, `drafts/A399820.txt` and `drafts/A399821.txt`. The
+renewal-identity sequences `G` and `H` remain in reserve as
+`drafts/A398XXX1.txt` and `drafts/A398XXX2.txt`, waiting for a free slot (the
+limit is three active drafts). Before submitting any draft, replace
+placeholder cross-references with real A-numbers, rerun the relevant
+verification script, search OEIS again on the submission day, and check that
+every `%H` link resolves.

@@ -17,13 +17,16 @@
    correcta es GOTEO DE CALIDAD, no ráfaga — cada entrada con su
    programa reproducible, sus referencias con MR, y su b-file.
 
-## En el aire (3/3 slots ocupados)
+## En el aire (3/3 slots ocupados) — 12-09-2026
 
 | A-number | qué | estado |
 |---|---|---|
-| A398792 | a(n) fusión Collatz, 36 términos | proposed (16-08: 2ª ronda editorial aplicada — Marcus + Irvine) |
-| A398793 | b(n) las nuevas, 35 términos | proposed (16-08: ídem; nombre reescrito autocontenido) |
-| A398794 | (5x+1)/2, 22 términos | proposed (16-08: ídem; jerga fuera) |
+| A399819 | e8: estrato \|M\|=8 de las clases nuevas, 20 términos | proposed (12-09-2026) |
+| A399820 | e10: estrato \|M\|=10, 20 términos | proposed (12-09-2026) |
+| A399821 | e12: estrato \|M\|=12, 20 términos | proposed (12-09-2026) |
+
+**Ya publicadas (slots liberados):** A398792, A398793, A398794 y A398795,
+las cuatro aprobadas antes del 10-09-2026.
 
 ## LA 2ª RONDA EDITORIAL (16-08-2026) — qué pidieron y qué se cambió
 
@@ -125,3 +128,49 @@ duplica: queda como reserva editorial en estos cinco archivos:
 Antes de enviar cualquiera: reservar A-number real, reemplazar todos los
 `A398XXX*` cruzados, re-consultar OEIS ese mismo dia, y mantener los offsets del
 borrador salvo que una verificacion nueva obligue a cambiarlos.
+
+---
+
+## Actualizacion 12-09-2026 — LA 3a TANDA, ENVIADA
+
+Los cuatro anteriores estaban aprobados y `My Drafts` marcaba 0, asi que los
+tres slots estaban libres. Se reservaron **A399819-A399821** y se enviaron los
+tres estratos, que son los que se referencian entre si (un slot suelto habria
+dejado referencias cruzadas rotas):
+
+| A-number | archivo | sucesion | estado |
+|---|---|---|---|
+| A399819 | `A399819.txt` | `e8` de la cadena `(k,c)` | proposed 12-09-2026 20:38 EDT |
+| A399820 | `A399820.txt` | `e10` | proposed 12-09-2026 20:38 EDT |
+| A399821 | `A399821.txt` | `e12` | proposed 12-09-2026 20:37 EDT |
+
+Busqueda OEIS del mismo dia (12-09-2026) con los terminos mostrados: **No
+results** en las tres, con control Fibonacci -> A000045 OK.
+
+**Tres correcciones mecanicas hechas sobre el borrador antes de enviar** (nada
+de matematica, solo formato de la casa):
+
+1. **El link a `conjeturadecollazpython` daba 404**: ese repo no existe en
+   publico — el unico repo publico de la cuenta es `zootheorem`. Se quito ese
+   `%H` y se dejo solo el de `zootheorem`, igual que en las cuatro entradas ya
+   aprobadas. **Consecuencia pendiente**: `estratoscadena.py` (y tambien
+   `identidadexacta.py`, que usan los dos borradores en recamara) no estan en
+   ningun repo publico. Si se quieren citar, hay que subirlos a `zootheorem`.
+2. **Segundo campo del `%O` mal en dos de los tres.** El `%O` es
+   `offset,posicion del primer termino con |a| >= 2`. e10 empieza `0,1,4,...`
+   -> es la posicion 3, no 2. e12 empieza `0,0,0,1,5,...` -> posicion 5, no 4.
+   (Se comprobo la regla contra A398792 `%O 1,4` y A398795 `%O 1,5`.) e8
+   estaba bien con `10,1`.
+3. **`%o # Python` -> `%o (Python)`**, que es la etiqueta que usan las cuatro
+   entradas aprobadas.
+
+**Sin tocar, para que lo decida el autor:** el comentario
+«Checked against OEIS on Sep 12 2026 with the displayed terms: no results»
+va tal cual en las tres entradas. Es metadato del proceso, no del objeto
+matematico, y es el tipo de linea que un editor pide quitar (cuesta una ronda).
+La misma informacion va ademas en la nota de discusion, que es su sitio.
+
+**En recamara siguen** `A398XXX1.txt` (`G(n)`) y `A398XXX2.txt` (`H(n)`), que
+se referencian entre si: los dos entran juntos en cuanto se aprueben dos de
+los tres de arriba. Antes de enviarlos hay que arreglarles el mismo link 404.
+

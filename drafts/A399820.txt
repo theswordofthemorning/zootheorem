@@ -1,14 +1,14 @@
-﻿%I A398XXX4
-%S 0,1,4,12,30,65,131,247,447,761,1242,1953,3003,4485,6570,9410,13204,18164,24596,32753
+%I A399820
+%S 0,1,4,12,30,65,131,247,447,761,1242,1953,3003,4485,6570,9410,13204,
+%T 18164,24596,32753
 %N Number of new Collatz merging classes at level n with exactly 10 mixed-parity steps.
 %C Let T be the Collatz map (A014682): T(x) = x/2 if x is even, T(x) = (3*x+1)/2 if x is odd. A new merging class at level n is a residue class modulo 2^n for which the pair (r,r+1) merges at step n with equal odd count and is not inherited from a merging class at level n-1.
 %C This sequence counts the new classes whose two trajectories have opposite parity at exactly 10 of the n steps. The first term is for n = 10.
-%C This is the next stratum after A398XXX3. Exact computation in the range shown finds no quasipolynomial formula of degree <= 8 and period <= 8 starting by n <= 16.
-%C Checked against OEIS on Sep 10 2026 with the displayed terms: no results.
-%H Omar Said, <a href="https://github.com/theswordofthemorning/conjeturadecollazpython/blob/main/estratoscadena.py">Exact stratum computation and checks</a>
+%C This is the next stratum after A399819. Exact computation in the range shown finds no quasipolynomial formula of degree <= 8 and period <= 8 starting by n <= 16.
+%C Checked against OEIS on Sep 12 2026 with the displayed terms: no results.
 %H Omar Said, <a href="https://github.com/theswordofthemorning/zootheorem">Statements, proofs, sequence data and verification scripts</a>
 %e a(11) = 1: the first new merging class with exactly ten mixed-parity steps appears at level 11.
-%o # Python
+%o (Python)
 %o def step(x):
 %o     return (3*x + 1)//2 if x & 1 else x//2
 %o def ok(r, n):
@@ -22,7 +22,7 @@
 %o     return False
 %o def a(n):
 %o     return sum(ok(r, n) for r in range(2**n - 1))
-%Y Cf. A398792, A398793, A398XXX3, A398XXX5.
+%Y Cf. A398792, A398793, A399819, A399821.
 %K nonn,more
-%O 10,2
-%A _Omar Said_, Sep 10 2026
+%O 10,3
+%A _Omar Said_, Sep 12 2026
