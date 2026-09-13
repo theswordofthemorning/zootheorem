@@ -1,0 +1,31 @@
+archivo	desde	hasta	titulo
+README.md.txt	1	16	# zootheorem
+README.md.txt	17	29	## Contents
+README.md.txt	30	39	## How to verify
+README.md.txt	40	47	## Status of each claim
+README.md.txt	48	61	## OEIS workflow notes
+PLAN_INVESTIGACION.md.txt	1	7	# Research plan and limits — 2026-09-13
+PLAN_INVESTIGACION.md.txt	8	21	## The target
+PLAN_INVESTIGACION.md.txt	22	38	## Current foundation
+PLAN_INVESTIGACION.md.txt	39	69	## Ordered work and completion criteria
+PLAN_INVESTIGACION.md.txt	70	81	## Publication status
+drafts__ARSENAL.md.txt	7	8	# EL ARSENAL — sucesiones verificadas listas para OEIS (09-08-2026; estado actualizado 13-09-2026)
+drafts__ARSENAL.md.txt	9	25	## El flujo de OEIS, en cinco líneas (pillarle la mano)
+drafts__ARSENAL.md.txt	26	36	## En el aire — observación del 13-09-2026
+drafts__ARSENAL.md.txt	37	57	## LA 2ª RONDA EDITORIAL (16-08-2026) — qué pidieron y qué se cambió
+drafts__ARSENAL.md.txt	58	86	## LAS REGLAS DE ESTILO DE OEIS, aprendidas en la práctica
+drafts__ARSENAL.md.txt	87	95	## En recámara (texto listo, esperando slot)
+drafts__ARSENAL.md.txt	96	96	## El cargador de reserva (verificadas, NO catalogadas — comprobado
+drafts__ARSENAL.md.txt	97	120	## contra OEIS con control durante las sesiones del repo)
+drafts__ARSENAL.md.txt	121	139	## Actualizacion 10-09-2026
+drafts__ARSENAL.md.txt	140	185	## Actualizacion 12-09-2026 — LA 3a TANDA, ENVIADA
+drafts__ARSENAL.md.txt	186	190	## NOTA PARA LA PROXIMA SESION (la deja Claude, 12-09-2026 ~20:40 EDT)
+drafts__ARSENAL.md.txt	191	202	### Donde quedo todo
+drafts__ARSENAL.md.txt	203	210	### Lo primero al entrar: mirar si hay comentario de editor
+drafts__ARSENAL.md.txt	211	230	### Tres cosas pendientes, por orden de importancia
+drafts__ARSENAL.md.txt	231	237	### Y cuando se libere un slot
+drafts__ARSENAL.md.txt	238	249	### Como se hace el envio, en concreto (para no redescubrirlo)
+drafts__PENDING_A398795.md.txt	5	26	# A398795 — pendiente de envío (bloqueada por el límite de drafts)
+drafts__PENDING_A398795.md.txt	27	39	## Cómo enviarla cuando se libere un slot
+drafts__PENDING_A398795.md.txt	40	68	## El contenido, listo para pegar (todo menos la línea %I)
+drafts__PENDING_A398795.md.txt	69	78	## Verificación del contenido

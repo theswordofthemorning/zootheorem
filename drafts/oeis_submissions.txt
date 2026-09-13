@@ -1,3 +1,7 @@
+ARCHIVO HISTORICO — NO REENVIAR ESTOS BORRADORES.
+Al 13-09-2026 A398792, A398793, A398794 y A398795 están aprobadas.
+El estado vigente y las aclaraciones pendientes están en REVISION_20260913.md.
+
 OEIS SUBMISSION DRAFTS -- zootheorem (2026-08-09)
 ==================================================
 Four sequences. A-numbers allocated 2026-08-09: A398792 (Collatz a),

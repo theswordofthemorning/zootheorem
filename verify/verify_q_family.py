@@ -99,7 +99,7 @@ for (q, r) in ((5, 3), (7, 3), (3, 5)):
 
 print()
 print("The one-line criticality statement (see papers/02): writing each")
-print("step of the pair-difference dynamics as c -> m*c + shift, the")
+print("shared step under the fresh-bit law as c -> m*c, the")
 print("multiplier m is a fair coin on {1/2, q/2}, so E[m] = (1+q)/4.")
 print("E[m] = 1 exactly iff q = 3: among all maps (qx+1)/2 the Collatz")
-print("case is the unique critical one.")
+print("case uniquely has mean shared-step multiplier one. This is not a density theorem.")

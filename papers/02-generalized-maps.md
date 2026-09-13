@@ -1,6 +1,6 @@
-# Merging of consecutive integers for the maps (qx+r)/2: first data and two theorems
+# Merging of consecutive integers for the maps (qx+r)/2: data and two theorems
 
-*(zootheorem, paper 02 — 2026-08-09)*
+*(zootheorem, paper 02 — 2026-08-09; scope corrected 2026-09-13)*
 
 ## Definition
 
@@ -18,7 +18,7 @@ Two remarks make this well-defined and interesting beyond Collatz:
 2. The count is again class-exact: each counted class contains
    infinitely many merging pairs.
 
-## Data (first computation of these counts, to our knowledge)
+## Data (exact finite counts)
 
 `a_{5,1}(n)`, `n = 1…22` (first nonzero at `n = 11`):
 
@@ -35,8 +35,9 @@ Two remarks make this well-defined and interesting beyond Collatz:
 ```
 
 Densities at `n = 22`: `q = 3`: **0.409** (rising) · `q = 7`:
-**0.107** (nearly flat) · `q = 5`: **0.0044**. Neither sequence is in
-the OEIS (checked 2026-08-09 with control). Terms `n ≤ 18` are
+**0.107** · `q = 5`: **0.0044** (rounded finite-level ratios). These
+sequences are [A398794](https://oeis.org/A398794) and
+[A398795](https://oeis.org/A398795). Terms `n ≤ 18` are
 re-verified by brute force in `verify/verify_q_family.py`; terms
 19–22 come from an exact class computation that matches the brute
 force on the whole common range.
@@ -53,18 +54,20 @@ transforms exactly:
 - both even: `d → d/2`;
 - both odd: `d → q·d/2`.
 
-By Terras uniformity the two cases are equidistributed over residue
-classes, so the shared-step multiplier `m` is a fair coin on
+Condition on a fixed finite parity history for which the next step
+is shared. The next unused Terras bit is fair under the uniform
+residue-class law (or its Haar limit), so the multiplier `m` is a coin on
 `{1/2, q/2}` and
 
 > **E[m] = (1+q)/4, which equals 1 exactly when q = 3.**
 
-Among all maps `(qx+1)/2` the Collatz map is the unique critical one:
-for `q ≥ 5`, `E[log₂ m] = (log₂ q − 2)/2 > 0` and the difference
-dynamics is supercritical in log — consistent with the collapse of the
-measured merging densities above (0.409 vs 0.107 vs 0.0044). The
-interpretation of the collapse is supported by the data; the displayed
-expectation is an exact statement about shared steps.
+Here “critical” refers only to the first moment E[m]=1. For positive
+odd q>=5, `E[log_2 m]=(log_2 q-2)/2>0`; for q=3 it is negative.
+The logarithmic statement requires q>0. These are shared-step
+identities under the declared law, not conclusions about the limiting
+merging densities or about conditioning on future survival. Among
+positive odd q>=3, only q=3 has a positive fractional-moment window;
+q=1 also has such a window and is outside that restricted claim.
 
 ## Theorem 2 (obstruction; proved)
 

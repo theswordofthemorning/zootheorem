@@ -1,0 +1,22 @@
+# A399819; n<=20 independently checked; later terms from historical symbolic computation.
+9 1
+10 3
+11 7
+12 15
+13 27
+14 45
+15 73
+16 111
+17 166
+18 237
+19 330
+20 451
+21 605
+22 797
+23 1033
+24 1316
+25 1655
+26 2054
+27 2517
+28 3051
+29 3665

@@ -14,10 +14,10 @@
 #
 #   By Terras' theorem (1976) the first n parities depend only on
 #   r mod 2^n, so a(n) counts entire residue classes: every pair
-#   (2^n*m + r, 2^n*m + r + 1) with m >= 1 in a counted class merges
-#   and has equal total stopping time. Hence a(n)/2^n is a proven
-#   lower bound for the lower density of consecutive pairs with equal
-#   Collatz height.
+#   (2^n*m + r, 2^n*m + r + 1) with m >= 0 in a counted class merges.
+#   For m >= 1 its finite classical heights are equal IF the common
+#   trajectory reaches 1. The unconditional density bound is for
+#   balanced merging; see the scope correction in papers/01.
 #
 #   b(n) = a(n+1) - 2*a(n)   (classes that merge "for the first time"
 #          at level n+1; b(n) >= 0 because a(n+1) >= 2*a(n), proved).

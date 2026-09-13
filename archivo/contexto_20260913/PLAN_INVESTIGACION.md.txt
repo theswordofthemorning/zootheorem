@@ -1,0 +1,81 @@
+# Research plan and limits — 2026-09-13
+
+This is the current publication plan. The laboratory's detailed companion is
+`conjeturadecollazpython/ESTADO_INVESTIGACION.md` (a separate repository).
+The numbered papers here contain results with their own hypotheses; this
+plan also records obligations that have **not** been proved.
+
+## The target
+
+For T=A014682, let a(n) count classes of consecutive pairs that merge by
+step n with equal odd counts. Doubling gives the limit
+`phi=lim a(n)/2^n`. Our precise target is **phi=1**.
+
+If F is the set of positive integer pairs that eventually merge in this
+balanced sense, `lower natural density(F)>=phi`. Thus phi=1 implies
+natural density one of F. The converse equality of densities does not
+follow from an increasing union of periodic sets. Equal **finite**
+classical heights additionally require convergence and control of first
+arrival at 1. The historical name “Gao–Wu in density” should not conceal
+these distinctions or replace comparison with the original statements.
+
+## Current foundation
+
+| Component | What can be used | What it does not establish |
+|---|---|---|
+| Papers 01–02 | Exact residue counts, doubling, mirror and prime obstruction | Convergence of every trajectory or a limiting density from finite ratios |
+| Paper 03 | Fractional moments at deterministic times under its stated domination and fresh multiplier law | The same bound after exit or survival conditioning |
+| Laboratory Suricatas and Castoras | Common invariants and exact current balance | Uniform contraction over all scales and late times |
+| Laboratory Erizas | Obstruction to that uniform contraction, including a whole linear scale–time sector | Failure of every fixed-scale or special-residue approach |
+| Laboratory Mangostas and Gacelas | Exact shared-run law, mixed-step clock, harmonic change of measure, survival and multiplicative-product estimates | Control of the additive term at exit or the full return clock |
+| Combined excursion bound | Written deduction `P_(2,c)(tau>t)<=C sqrt(log(t+2)/(t+1))`, uniformly in integer c | Boundary waiting times; a fully formalized probability proof |
+
+The last two rows refer to the laboratory's files in
+`depuracion/frente20260910/` and `depuracion/coherencia20260913/Matematica.md`.
+Their local review 12 has been incorporated with qualifications: its
+suggested O(n) clock uses a measured mean and is not adopted as a theorem.
+The probability arguments are not all formalized in Lean.
+
+## Ordered work and completion criteria
+
+1. **P0 — Coherence.** Keep statements, data, scripts and the laboratory
+   SQLite registry consistent. Correct the three high-stratum offsets and
+   supply their direct verifier. Completed checks and remaining scope are
+   recorded in [the local revision note](drafts/REVISION_20260913.md).
+2. **P1 — Full return clock.** Extend the interior excursion bound to
+   include k=0,1 boundary segments. Specify entrance, restart and mixed
+   times separately. Completion requires a global clock bound under the
+   actual conditional law, with its dependence on the start explicit.
+3. **P2 — Exit window.** Write `u_tau=Pi_tau*u0+W_tau`, u0=c/9. Gacelas
+   controls the product on long excursions. Seek fixed M<infinity and
+   p>0 such that `P(|W_tau|<=M | tau>T(c))>=p`, uniformly on a declared
+   domain, for a declared horizon of order log(2+|c|). Subtracting the
+   exponentially small product failure would then give joint mass in a
+   bounded exit window. Completion is a proof under this law, or an
+   explicit family refuting the proposed uniformity.
+4. **P3 — Starts and absorption.** Control the actual starts c_i and show
+   divergence of the sum of conditional success probabilities along real
+   visits. Check the strong Markov and conditional Borel–Cantelli steps
+   without assuming the recurrence being sought. Only a complete chain
+   of these implications would close phi=1.
+5. **P4 — Publication.** Update both plans and the registry whenever a
+   component closes or fails. Publish ranges and proof dependencies,
+   distinguishing exact enumeration, written proof and formal proof.
+
+For P2 experiments, include both signs, small starts, powers of 2 and 3
+and neighbours, and starts designed by congruences. Declare the proposed
+window before computing; record survivors, exits and horizon censoring
+separately. A marginal median or a finite fit is not a uniform exit bound.
+
+## Publication status
+
+A398792–A398795 are published. A399819–A399821 were re-proposed on
+2026-09-13 after corrected offsets and explicit examples; approval is
+pending at the last recorded observation. Their current local snapshots
+and b-files agree. Terms through n=20 have a direct independent verifier;
+later stored terms retain their historical symbolic provenance.
+
+An additional clarification for the finite-height interpretation of
+A398792 is prepared in the revision note. It has not been posted in
+this repository audit. OEIS acceptance of a sequence does not establish
+the asymptotic claims of this research plan.

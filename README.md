@@ -1,55 +1,31 @@
 # zootheorem
 
-Theorems, integer sequences and verification scripts from an ongoing
-study of the pairwise dynamics of Collatz-type maps — how the
-trajectories of two nearby integers merge under maps of the family
+Results on balanced merging of consecutive integers for
+`T(x)=x/2` (even), `(qx+r)/2` (odd), with q,r odd.
+Collatz uses q=3,r=1, OEIS A014682.
 
-```
-T(x) = x/2            if x is even
-T(x) = (q*x + r)/2    if x is odd        (q, r odd; q = 3, r = 1 is Collatz)
-```
+**Start with [PLAN_INVESTIGACION.md](PLAN_INVESTIGACION.md).**
+Read only the paper or verifier needed for the task; do not preload
+submission history or the companion laboratory's archives.
 
-This repository publishes **results** (statements, self-contained
-proofs, sequence data, and independent brute-force verification
-scripts). The research programme behind them is not published here.
-
-## Contents
-
-| path | what it is |
+| Content | Location |
 |---|---|
-| `papers/01-merging-classes.md` | The sequences a(n), b(n): merging classes of consecutive integers under the shortcut Collatz map. Definition, the doubling theorem, the proven density lower bound 0.435658, the mirror theorem (3x−1 gives the identical sequence), and the verification provenance of every term. |
-| `papers/02-generalized-maps.md` | The same count for (5x+1)/2 and (7x+1)/2 — measured for the first time — plus two theorems: the criticality E[m] = (1+q)/4 (q = 3 is the unique critical map of the family) and the obstruction theorem (if an odd prime divides r but not q, consecutive pairs never merge; verified as a falsifiable prediction on three maps). |
-| `papers/03-uniform-fractional-moment-bound.md` | A self-contained lemma: uniform-in-time fractional moment bounds for critical random affine recursions (E[multiplier] = 1), with explicit constants, by subadditivity alone. |
-| `seqs/` | Sequence data in b-file format (`n a(n)` per line). |
-| `verify/` | Stand-alone brute-force verification scripts (Python 3, no dependencies). They recompute the sequences from the raw definition and exit with an error on any mismatch. |
-| `drafts/` | OEIS submission notes and reserve drafts. The `A398XXX*.txt` files are placeholders for future A-numbers and must be edited after allocation. |
-| `lean/mirror_theorem.lean` | The mirror theorem (a₊(n) = a₋(n) for all n) formally proved in Lean 4, core only (no Mathlib), zero `sorry`. Comments in Spanish; the statement and proof are machine-checked. |
+| Merging counts, doubling, density bound, mirror | [Paper 01](papers/01-merging-classes.md) |
+| q=5,7 counts and prime obstruction | [Paper 02](papers/02-generalized-maps.md) |
+| Fractional moments under explicit hypotheses | [Paper 03](papers/03-uniform-fractional-moment-bound.md) |
+| Integer data | `seqs/` |
+| Current OEIS checklist and history lookup | [drafts/ARSENAL.md](drafts/ARSENAL.md) |
 
-## How to verify
-
-```
-python verify/verify_merging_classes.py     # a(1)..a(20) by brute force
-python verify/verify_q_family.py            # q = 5, 7 and the obstruction tests
-lean lean/mirror_theorem.lean               # needs Lean 4 (elan); no output = proved
+```text
+python verify/verify_merging_classes.py   # direct through n=20
+python verify/verify_q_family.py         # q=5,7 through 18; obstruction through 14
+python verify/verify_strata.py           # e8,e10,e12 through 20
+python verify/verify_consistency.py      # stored lists and constants
+lean lean/mirror_theorem.lean            # formal mirror theorem
 ```
 
-## Status of each claim
-
-Every claim in `papers/` carries one of three labels, and the labels
-are part of the text: **proved** (with the proof, or machine-checked in
-Lean), **computed exactly** (integer computation, no sampling, with the
-range stated), or **measured** (with the range and the estimator
-stated). Nothing is extrapolated.
-
-## OEIS workflow notes
-
-A398792 through A398795 are approved and published. On 2026-09-12 the three
-chain strata were submitted and are `proposed`: A399819 (`e8`), A399820
-(`e10`) and A399821 (`e12`), whose submitted text is kept verbatim in
-`drafts/A399819.txt`, `drafts/A399820.txt` and `drafts/A399821.txt`. The
-renewal-identity sequences `G` and `H` remain in reserve as
-`drafts/A398XXX1.txt` and `drafts/A398XXX2.txt`, waiting for a free slot (the
-limit is three active drafts). Before submitting any draft, replace
-placeholder cross-references with real A-numbers, rerun the relevant
-verification script, search OEIS again on the submission day, and check that
-every `%H` link resolves.
+Python verifiers need only the standard library. Run checks relevant
+to the change; documentation edits do not require fresh large sweeps.
+Distinguish written/formal proofs, exact finite counts and measurements.
+Balanced merging alone does not prove convergence or equal finite heights.
+The [previous README](archivo/contexto_20260913/README.md.txt) is preserved.

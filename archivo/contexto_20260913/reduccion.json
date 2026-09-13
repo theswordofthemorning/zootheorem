@@ -1,0 +1,38 @@
+{
+  "repo": "zootheorem",
+  "documentos": [
+    {
+      "archivo": "README.md",
+      "palabras_antes": 560,
+      "palabras_despues": 179,
+      "bytes_antes": 3987,
+      "bytes_despues": 1539
+    },
+    {
+      "archivo": "PLAN_INVESTIGACION.md",
+      "palabras_antes": 727,
+      "palabras_despues": 347,
+      "bytes_antes": 5053,
+      "bytes_despues": 2527
+    },
+    {
+      "archivo": "drafts/ARSENAL.md",
+      "palabras_antes": 2498,
+      "palabras_despues": 294,
+      "bytes_antes": 16286,
+      "bytes_despues": 2129
+    },
+    {
+      "archivo": "drafts/PENDING_A398795.md",
+      "palabras_antes": 719,
+      "palabras_despues": 32,
+      "bytes_antes": 4407,
+      "bytes_despues": 307
+    }
+  ],
+  "palabras_antes": 4504,
+  "palabras_despues": 852,
+  "reduccion_porcentual": 81.08,
+  "copias_literales_verificadas": 4,
+  "enlaces_locales_verificados": 17
+}

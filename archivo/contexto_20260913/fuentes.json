@@ -1,0 +1,38 @@
+{
+  "fecha": "2026-09-13",
+  "tipo": "instantaneas literales antes de reducir el contexto",
+  "archivos": [
+    {
+      "original": "README.md",
+      "copia": "archivo/contexto_20260913/README.md.txt",
+      "sha256": "7af26530c37005d6eb8acca0cb745687f3d81276e1c66313ad92610c3d698fbe",
+      "bytes": 3987,
+      "palabras": 560,
+      "lineas": 61
+    },
+    {
+      "original": "PLAN_INVESTIGACION.md",
+      "copia": "archivo/contexto_20260913/PLAN_INVESTIGACION.md.txt",
+      "sha256": "c4203b71acaa6fa8e3c45aff9dee3aeab7b9cbc2937807e9c1b52c0a4d8922b4",
+      "bytes": 5053,
+      "palabras": 727,
+      "lineas": 81
+    },
+    {
+      "original": "drafts/ARSENAL.md",
+      "copia": "archivo/contexto_20260913/drafts__ARSENAL.md.txt",
+      "sha256": "7e5bbea8198294f4361f31b6f1c4a7c9e3d63e8ca33f926d07d0f5fc77cda0d8",
+      "bytes": 16286,
+      "palabras": 2498,
+      "lineas": 249
+    },
+    {
+      "original": "drafts/PENDING_A398795.md",
+      "copia": "archivo/contexto_20260913/drafts__PENDING_A398795.md.txt",
+      "sha256": "304ed11d400dcd48f34c692af64374a6be4a416c06b95f145ee0f3aa34899d25",
+      "bytes": 4407,
+      "palabras": 719,
+      "lineas": 78
+    }
+  ]
+}

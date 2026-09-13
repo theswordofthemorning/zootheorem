@@ -1,243 +1,40 @@
-# EL ARSENAL — sucesiones verificadas listas para OEIS (09-08-2026; actualizado 16-08-2026)
+# OEIS: working checklist — 13-09-2026
 
-## El flujo de OEIS, en cinco líneas (pillarle la mano)
+Use this file only for OEIS work. Research continues from
+[PLAN_INVESTIGACION.md](../PLAN_INVESTIGACION.md).
 
-1. `allocate` A-number → draft (**editing**) → botón «ready for review»
-   (**proposed**) → un editor revisa → o comenta (caja rosa, vuelve a
-   editing — responder RÁPIDO y re-proponer) → o **aprueba** =
-   PUBLICADA (visible en búsquedas). Semanas típicas para cuentas
-   nuevas; el intercambio con Michel Marcus en minutos es buena señal.
-2. **El límite cuenta drafts ACTIVOS (editing + proposed) = 3 para
-   cuentas nuevas.** Era 7 hasta 2019; lo bajaron por saturación de
-   editores. Cada aprobación LIBERA su slot al instante.
-3. **El límite se puede subir** pidiéndolo a los editores con
-   historial de submissions bien formateadas. La estrategia: que las
-   tres primeras aterricen impecables y luego pedir el aumento.
-4. El cuello de botella es humano (revisión), no nuestro: la táctica
-   correcta es GOTEO DE CALIDAD, no ráfaga — cada entrada con su
-   programa reproducible, sus referencias con MR, y su b-file.
+## Last recorded state
 
-## En el aire (3/3 slots ocupados) — 12-09-2026
-
-| A-number | qué | estado |
-|---|---|---|
-| A399819 | e8: estrato \|M\|=8 de las clases nuevas, 20 términos | proposed (12-09-2026) |
-| A399820 | e10: estrato \|M\|=10, 20 términos | proposed (12-09-2026) |
-| A399821 | e12: estrato \|M\|=12, 20 términos | proposed (12-09-2026) |
-
-**Ya publicadas (slots liberados):** A398792, A398793, A398794 y A398795,
-las cuatro aprobadas antes del 10-09-2026.
-
-## LA 2ª RONDA EDITORIAL (16-08-2026) — qué pidieron y qué se cambió
-
-**Sean A. Irvine comentó los tres en doce minutos** (18:42–18:54 EDT) y
-con ello **devolvió los tres de `proposed` a `editing`**. Contestados y
-re-propuestos la misma noche. **Ni una sola objeción matemática en las
-dos rondas y con dos editores**: datos, definición, programas y novedad
-no fueron cuestionados por nadie. Todo fue redacción.
-
-| entrada | lo que pidió | lo que se cambió |
-|---|---|---|
-| A398792 | «"shortcut Collatz map" is not standard terminology in the OEIS, call it the "Collatz map (A014682)"» | NAME reescrito con `Collatz map T (A014682)` y los dos casos explícitos; `proved` fuera de FORMULA y del 2º comentario; dos comentarios nuevos (relevancia al 3x+1; por qué los términos paran donde paran) |
-| A398793 | nombre poco claro, «what is Terras's identity», relevancia, y no escribir «proved» | NAME autocontenido (dice la condición de fusión en vez de suponer la frase) con la fórmula al final; identidad de Terras ENUNCIADA en vez de citada; `proved` fuera de sus dos apariciones; comentario de relevancia |
-| A398794 | relevancia y «avoid jargon like "supercritical regime"» | el 2º comentario dice el mecanismo en llano (multiplicador esperado `(1+q)/4`, mayor que 1 desde `q >= 5`); comentario de relevancia |
-
-**El matiz del nombre de A398793, declarado al editor en la nota:** el
-prefijo con la fórmula lo abría en el envío original y **lo quitó Marcus
-en la 1ª ronda**; Irvine pidió después claridad. Dos editores con
-indicaciones opuestas: se puso la fórmula al final (donde define y no
-reemplaza a la descripción) y **se le dijo a Irvine que decida**. Oscilar
-en silencio entre dos editores es peor que nombrar el conflicto.
-
-## LAS REGLAS DE ESTILO DE OEIS, aprendidas en la práctica
-
-1. **El mapa del atajo ES A014682** («The Collatz or 3x+1 function:
-   a(n) = n/2 if n is even, otherwise (3n+1)/2»), y su propio comentario
-   dice que es la `T` habitual de la literatura. Citarlo por A-number:
-   «shortcut Collatz map» no es terminología de la casa.
-2. **No escribir «proved»**: en OEIS todo se supone demostrado salvo
-   aviso en contra. **Pero el cualificador REAL se queda** — «unconditionally
-   true for all values below 2^71» no es una etiqueta de orgullo, es una
-   condición verdadera. La distinción es esa: insignia fuera, condición
-   dentro.
-3. **Nada de jerga.** «Supercritical regime» fuera; el mecanismo dicho en
-   llano.
-4. **Toda entrada tiene que contestar «¿qué aporta esto al 3x+1?»** — lo
-   preguntó dos veces. Y la respuesta honesta **incluye el límite**: que
-   `(3x-1)/2` da la misma sucesión y por tanto no es evidencia sobre la
-   conjetura. Declarar el límite propio suma credibilidad; esconderlo la
-   resta.
-5. **En la caja COMMENTS cada LÍNEA es un comentario.** Nada de líneas en
-   blanco entre ellos: se cuelan como comentarios vacíos.
-6. **La nota de discusión se adjunta al pulsar «ready for review»**, no
-   antes.
-7. **⇢ LA REGLA OPERATIVA QUE MÁS IMPORTA:** un comentario de editor
-   **devuelve el draft a `editing`**, y ahí se queda **congelado hasta que
-   el autor re-propone**. Nadie lo vuelve a mirar solo. **El riesgo no es
-   el rechazo: es la deriva.** Si pasan ~2 semanas sin comentario, el
-   movimiento correcto es un empujón cortés en la caja de discusión, no
-   re-proponer.
-
-## En recámara (texto listo, esperando slot)
-
-- **A398795** — (7x+1)/2, 22 términos. Texto completo en
-  `PENDING_A398795.md`. Primera en recargar. **Sigue bloqueada al
-  16-08**: los tres slots continúan ocupados (una aprobación libera el
-  suyo al instante). **Reloj de la reserva**: el A-number se asignó el
-  09-08 y la reserva dura ~1 mes — vence alrededor del **09-09-2026**;
-  si expira se pide otro número y se ajustan las referencias cruzadas.
-
-## El cargador de reserva (verificadas, NO catalogadas — comprobado
-## contra OEIS con control durante las sesiones del repo)
-
-| # | sucesión | términos conocidos | historia |
+| Entry | State observed 13-09 | Data indices | Full offset |
 |---|---|---|---|
-| 1 | primeros retornos del par a gap 1 (catálogo extendido a largo 30) | 1,0,0,1,1,3,5,6,11,19,31,55,98,176,313,578,1099,2047,3847,… | extiende las tablas de la tesis LaTourette 2007 y corrige su L11 (errata ya comunicada a Moravian) — la mejor historia editorial del lote |
-| 2 | b₄(m) = 7·2^{m−7} − m + 4 (estrato mínimo del piso g) | 3,7,15,30,60,121,… (m ≥ 7) | su hermana c₄ ES A079583 — el cruce da confianza; b₄ no está |
-| 3 | b-reducida del piso g | 1,4,11,28,66,149 | afirmación #51 del repo; no está en OEIS |
-| 4 | c-reducida del piso h **= H(k) de la identidad de renovación** | 1,3,9,24,58,134,300,659,1426 | afirmación del repo (gérmenes, `identidadexacta.py`); no está en OEIS. **FUSIONADA con la ex-#9 (12-08-2026): son LA MISMA serie** — la H de la identidad ES la c-reducida del piso h, con offset 3 (H(3)=H(4)=H(5)=0, H(6..14) = la serie; verificado término a término re-corriendo `identidadexacta.py`). Cross-reference valiosa para la entrada: un slot cubre ambas. `flecosr.py` extiende: c(15)=3053, c(16)=6487 |
-| 5 | las nuevas de c | 1,3,6,10,18,32,59,108 | afirmación #52; no está |
-| 6 | retornos de la cadena modificada (primeros retornos a (0,1) con el vórtice rebotado) | 0,1,0,0,1,2,5,7,10,18,29,49,86,151,271,480,881,1661,3093,5828 | la prima de la #1; retorno11.py |
-| 7 | perfil diferencial a_2(k) (fusión de {n, n+2}) | de diferenciales.py | familia entera Δ = 2,3,… disponible |
-| 8 | G(k) de la identidad de renovación | 0,0,0,0,1,5,16,44,110,259,588,1302 | identidadexacta.py |
-| 9 | e8: estrato \|M\|=8 de las clases nuevas de la cadena (k,c) | 3,7,15,27,45,73,111,166,237,330,451,605,797,1033,1316,1655,2054,2517,3051,3665 (desde N=10) | `estratoscadena.py`; consultada OEIS 09-08-2026 («No results», control Fibonacci OK). NO admite forma cuasi-polinomial (grado ≤ 8, periodo ≤ 8) — a diferencia de e6 = 3+(N−7)(N−8)/2, que ES cerrada cuadrática y por eso va como posible comentario en entrada ajena, no slot propio |
-| 10 | e10: estrato \|M\|=10 de las clases nuevas de la cadena (k,c) | 0,1,4,12,30,65,131,247,447,761,1242,1953,3003,4485,6570,9410,13204,18164,24596,32753 (desde N=10) | ídem `estratoscadena.py`; «No results» 09-08-2026; sin forma cuasi-polinomial |
-| 11 | e12: estrato \|M\|=12 de las clases nuevas de la cadena (k,c) | 0,0,0,1,5,18,52,134,315,681,1393,2698,4947,8712,14818,24465,39278,61513,94110,140829 (desde N=10) | ídem `estratoscadena.py`; «No results» 09-08-2026; sin forma cuasi-polinomial |
+| A398792–A398795 | Published | See entries | — |
+| A399819 (e8) | Proposed | 9..29 | 9,2 |
+| A399820 (e10) | Proposed | 11..29 | 11,2 |
+| A399821 (e12) | Proposed | 13..29 | 13,2 |
 
-**Total: ~15 balas fabricadas y verificadas** (4 en juego + 11 en
-reserva — 12-08-2026: entraron los tres estratos e8/e10/e12 y se
-fusionaron la ex-#4 y la ex-#9, que eran la misma serie). Regla antes de cargar cualquiera: re-consultar OEIS ESE DÍA
-con control (Fibonacci → A000045), definición sin revelar el método
-interno, programa de fuerza bruta en la entrada, y b-file.
+Details and witnesses: [REVISION_20260913.md](REVISION_20260913.md).
+The A398792 convergence clarification is prepared there but unposted.
+The new data/verifier files are local until published to the remote.
+G,H remain reserve placeholders in A398XXX1.txt and A398XXX2.txt.
 
----
+## Before an authorized submission
 
-## Actualizacion 10-09-2026
+1. Read the actual current draft and editor discussion; account limits and
+   state may change. Do not allocate another number for a published entry.
+2. Check data and examples with the relevant verifier. Direct validation
+   of the high strata covers n<=20; later terms retain symbolic provenance.
+3. Say “Collatz map (A014682)”; explain the mechanism plainly and what the
+   sequence contributes, including its limit. Avoid “proved” as a badge;
+   retain genuine qualifications such as a bounded verification range.
+4. In COMMENTS, each line is one comment; avoid empty lines. The complete
+   offset is `first index, position of first term with abs(a)>=2`.
+   Examples must exhibit residues/trajectories, not restate the name.
+5. Use real cross-references; check what each link supports. Search for
+   duplicates on submission day; do not add historical “no results” comments.
+6. Answer the specific editor questions. If the draft returned to editing,
+   re-propose after the response and verify the resulting state.
 
-A398792, A398793, A398794 y A398795 estan aprobadas. El lote nuevo NO las
-duplica: queda como reserva editorial en estos cinco archivos:
-
-| archivo | sucesion | verificacion |
-|---|---|---|
-| `A398XXX1.txt` | `G(n)` de la identidad de renovacion | `python identidadexacta.py`; busqueda OEIS sin resultados el 10-09-2026 |
-| `A398XXX2.txt` | `H(n)` de la identidad de renovacion | `python identidadexacta.py`; busqueda OEIS sin resultados el 10-09-2026 |
-| `A398XXX3.txt` | estrato `e8` de la cadena `(k,c)` | `python estratoscadena.py`; busqueda OEIS sin resultados el 10-09-2026 |
-| `A398XXX4.txt` | estrato `e10` de la cadena `(k,c)` | `python estratoscadena.py`; busqueda OEIS sin resultados el 10-09-2026 |
-| `A398XXX5.txt` | estrato `e12` de la cadena `(k,c)` | `python estratoscadena.py`; busqueda OEIS sin resultados el 10-09-2026 |
-
-Antes de enviar cualquiera: reservar A-number real, reemplazar todos los
-`A398XXX*` cruzados, re-consultar OEIS ese mismo dia, y mantener los offsets del
-borrador salvo que una verificacion nueva obligue a cambiarlos.
-
----
-
-## Actualizacion 12-09-2026 — LA 3a TANDA, ENVIADA
-
-Los cuatro anteriores estaban aprobados y `My Drafts` marcaba 0, asi que los
-tres slots estaban libres. Se reservaron **A399819-A399821** y se enviaron los
-tres estratos, que son los que se referencian entre si (un slot suelto habria
-dejado referencias cruzadas rotas):
-
-| A-number | archivo | sucesion | estado |
-|---|---|---|---|
-| A399819 | `A399819.txt` | `e8` de la cadena `(k,c)` | proposed 12-09-2026 20:38 EDT |
-| A399820 | `A399820.txt` | `e10` | proposed 12-09-2026 20:38 EDT |
-| A399821 | `A399821.txt` | `e12` | proposed 12-09-2026 20:37 EDT |
-
-Busqueda OEIS del mismo dia (12-09-2026) con los terminos mostrados: **No
-results** en las tres, con control Fibonacci -> A000045 OK.
-
-**Tres correcciones mecanicas hechas sobre el borrador antes de enviar** (nada
-de matematica, solo formato de la casa):
-
-1. **El link a `conjeturadecollazpython` daba 404**: ese repo no existe en
-   publico — el unico repo publico de la cuenta es `zootheorem`. Se quito ese
-   `%H` y se dejo solo el de `zootheorem`, igual que en las cuatro entradas ya
-   aprobadas. **Consecuencia pendiente**: `estratoscadena.py` (y tambien
-   `identidadexacta.py`, que usan los dos borradores en recamara) no estan en
-   ningun repo publico. Si se quieren citar, hay que subirlos a `zootheorem`.
-2. **Segundo campo del `%O` mal en dos de los tres.** El `%O` es
-   `offset,posicion del primer termino con |a| >= 2`. e10 empieza `0,1,4,...`
-   -> es la posicion 3, no 2. e12 empieza `0,0,0,1,5,...` -> posicion 5, no 4.
-   (Se comprobo la regla contra A398792 `%O 1,4` y A398795 `%O 1,5`.) e8
-   estaba bien con `10,1`.
-3. **`%o # Python` -> `%o (Python)`**, que es la etiqueta que usan las cuatro
-   entradas aprobadas.
-
-**Sin tocar, para que lo decida el autor:** el comentario
-«Checked against OEIS on Sep 12 2026 with the displayed terms: no results»
-va tal cual en las tres entradas. Es metadato del proceso, no del objeto
-matematico, y es el tipo de linea que un editor pide quitar (cuesta una ronda).
-La misma informacion va ademas en la nota de discusion, que es su sitio.
-
-**En recamara siguen** `A398XXX1.txt` (`G(n)`) y `A398XXX2.txt` (`H(n)`), que
-se referencian entre si: los dos entran juntos en cuanto se aprueben dos de
-los tres de arriba. Antes de enviarlos hay que arreglarles el mismo link 404.
-
-
----
-
-## NOTA PARA LA PROXIMA SESION (la deja Claude, 12-09-2026 ~20:40 EDT)
-
-Para quien abra esto despues — yo mismo, Astra, o quien sea. Estado exacto al
-cerrar, y que hacer al entrar.
-
-### Donde quedo todo
-
-- **Slots: 3/3 ocupados.** A399819, A399820 y A399821 en `proposed`, enviados
-  esta noche con nota de discusion. Nadie los ha mirado todavia.
-- **Publicadas: 7 en total si aprueban estas** — A398792, A398793, A398794 y
-  A398795 ya estan aprobadas y visibles en busquedas.
-- **Recamara: 2 borradores**, `A398XXX1.txt` (`G(n)`) y `A398XXX2.txt`
-  (`H(n)`). Se referencian entre si: entran **juntos**, no sueltos.
-- El texto exacto que se envio a OEIS esta en `A399819.txt`, `A399820.txt` y
-  `A399821.txt`, verbatim. Si un editor pide un cambio, cambiar el archivo
-  tambien, para que el repo no mienta.
-
-### Lo primero al entrar: mirar si hay comentario de editor
-
-`https://oeis.org/draft?user=Omar%20Said`. **Un comentario de editor devuelve
-el draft a `editing` y ahi se congela hasta que el autor re-propone**; nadie lo
-vuelve a mirar solo. Si hay caja rosa: contestar y re-proponer **la misma
-noche** (es lo que se hizo en las dos rondas anteriores y funciono). Si pasan
-~2 semanas sin nada: empujon cortes en la caja de discusion, **no** re-proponer.
-
-### Tres cosas pendientes, por orden de importancia
-
-1. **Decidir el comentario «Checked against OEIS on Sep 12 2026...»** que quedo
-   publicado en las tres entradas. Es metadato del proceso, no del objeto
-   matematico. Se dejo porque el autor pidio no revisar, pero es el tipo de
-   linea que un editor pide quitar y eso cuesta una ronda entera. Si se decide
-   quitarlo, hacerlo **antes** de que lo pida un editor, y quitarlo tambien de
-   `A398XXX1.txt` y `A398XXX2.txt`, que lo llevan igual.
-2. **Los scripts citados no existen en publico.** `estratoscadena.py` e
-   `identidadexacta.py` no estan en ningun repo publico de la cuenta — el link
-   a `conjeturadecollazpython` daba 404 y por eso se quito. **Los dos
-   borradores en recamara todavia lo llevan**: hay que quitarselo o subir los
-   scripts a `zootheorem` antes de enviarlos. Regla nueva de la casa:
-   **comprobar que cada `%H` responde 200 antes de enviar nada.**
-3. **Los b-files.** Ninguna de las tres enviadas lleva b-file, y ARSENAL dice
-   que la regla de la casa es mandarlo. 20 terminos caben en las tres lineas
-   de `%S/%T/%U`, asi que no es obligatorio, pero si `flecosr.py` o
-   `estratoscadena.py` extienden las series, un b-file es la mejor forma de
-   subir la calidad de la entrada sin tocar el texto.
-
-### Y cuando se libere un slot
-
-Entra **G + H juntos** (`A398XXX1.txt` + `A398XXX2.txt`), con el link 404 ya
-arreglado. Despues, del cargador de reserva, la mejor historia editorial sigue
-siendo la **#1** (primeros retornos a gap 1: extiende las tablas de LaTourette
-2007 y corrige su L11, con la errata ya comunicada a Moravian).
-
-### Como se hace el envio, en concreto (para no redescubrirlo)
-
-1. `https://oeis.org/edit/allocate` -> pedir N numeros. Caducan en ~1 mes.
-2. `https://oeis.org/edit?seq=AXXXXXX&internal=1` -> **una sola caja de texto
-   con el registro entero en formato `%`**. Es mucho mas comodo que el
-   formulario por campos. Conservar la primera linea (`%I #n fecha`) y escribir
-   el resto debajo. `Save Changes` -> queda en `editing`.
-3. En `https://oeis.org/draft/AXXXXXX`, escribir la nota en la caja de
-   discusion **y solo entonces** pulsar «These changes are ready for review».
-   La nota se adjunta al pulsar el boton, no antes.
-4. Recordar: el `%O` es `offset,posicion del primer termino con |a| >= 2`.
-   Es el error de formato mas facil de cometer.
+Historical rounds, correspondence and earlier procedures are preserved
+in [the complete arsenal](../archivo/contexto_20260913/drafts__ARSENAL.md.txt).
+Search `archivo/contexto_20260913/indice.tsv` from the repo root and read
+only the relevant lines. Historical approval rules are not new authorization.

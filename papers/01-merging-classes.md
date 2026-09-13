@@ -1,6 +1,6 @@
 # Merging classes of consecutive integers under the shortcut Collatz map
 
-*(zootheorem, paper 01 — 2026-08-09)*
+*(zootheorem, paper 01 — 2026-08-09; scope corrected 2026-09-13)*
 
 ## Definition
 
@@ -19,17 +19,19 @@ denoted `T` in the 3x+1 literature): `T(x) = x/2` for even `x`,
 By Terras' theorem (1976) the first `n` parities of a trajectory are
 determined by the residue mod `2^n`, and
 `T^n(2^n·m + r) = 3^{S_n(r)}·m + T^n(r)`. Consequently the condition
-above is decided by the residue class: **for every counted class, all
-pairs `(2^n·m + r, 2^n·m + r + 1)` with `m ≥ 1` merge** — their
-trajectories coincide from the merge index on — and therefore have
-equal Collatz height (equal total number of steps to reach 1) whenever
-the common trajectory reaches 1, which is unconditionally true for all
-starting values below `2^71` (Barina 2025).
+above is decided by the residue class: every counted class lifts to
+merging pairs `(2^n*m+r, 2^n*m+r+1)` for **all m >= 0**.
 
-**The `m ≥ 1` hypothesis is necessary.** For `m = 0` the counted
-property can fail (the trajectory may reach the attractor before step
-`n`); exactly three classes are exceptional (`r = 2, 4, 5`), stable
-from `n = 5` to at least `n = 22`. The counts a(n) are unaffected.
+For **m >= 1**, neither trajectory reaches 1 before step n, since
+`T^j(x) >= x/2^j > 1` for j<n. If the common tail reaches 1, the two
+classical stopping times to 1 are therefore equal: they use the same
+number n of steps of T and the same number of extra classical odd steps
+before sharing their tail. Convergence is a separate hypothesis.
+
+For m=0, merging still holds. Equality of first stopping times can fail:
+for instance 4 and 5 merge under T after three steps, although their
+classical heights are 2 and 5. The historical finite check found the
+exceptions r=2,4,5, stable for n=5..22; this does not affect a(n).
 
 ## Data
 
@@ -52,8 +54,8 @@ from `n = 5` to at least `n = 22`. The counts a(n) are unaffected.
 138581314
 ```
 
-Neither sequence is in the OEIS (checked 2026-08-09, with a Fibonacci
-control query returning A000045).
+These sequences are published as [A398792](https://oeis.org/A398792)
+and [A398793](https://oeis.org/A398793).
 
 ## Theorems (proved)
 
@@ -65,13 +67,24 @@ outputs for `r, r+1` coincided they still coincide, and the parities
 (hence `S`) are unchanged; and a counted `r` stays counted one level
 up because its two iterates are already the same number. ∎
 
-**Corollary (proven density bound).** `a(n)/2^n` is non-decreasing,
-and every value is a proven lower bound for the lower asymptotic
-density of consecutive integer pairs with equal Collatz height. At
-`n = 32`: **density ≥ 0.435658**, by exact integer computation over
-all `2^32` residues — no sampling. (For comparison, Gao (1993-style
-counts pushed to `10^8`) *measures* a density around 0.51; the value
-here is smaller but proven.)
+**Corollary (density bound for balanced merging).** Let F_n be the
+periodic set counted at level n, and F its increasing union. Then
+`a(n)/2^n` is nondecreasing and
+
+    lower natural density(F) >= phi := lim_n a(n)/2^n.
+
+Indeed F contains each fixed F_n, so its lower density bounds every
+`a(n)/2^n`. At n=32 this gives the exact lower bound
+`1871137623/4294967296 > 0.435658`. The integer count and its historical
+verification provenance are recorded below; the verifier here directly
+recomputes n<=20.
+
+This is an unconditional bound for balanced merging. Interpreting it as
+an unconditional bound for **finite** equal heights would require a
+separate convergence argument. Also, an increasing union of periodic
+sets need not have density equal to the limit of their densities.
+No general equality `density(F)=phi` is asserted. If phi=1, the displayed
+inequality does imply that F has natural density one.
 
 **Mirror theorem.** Define `a₋(n)` identically for the map
 `T₋(x) = x/2 / (3x−1)/2`. Then `a₋(n) = a(n)` for **all** `n`. The
@@ -91,8 +104,10 @@ well-defined combinatorial count, and that is all this note claims.
 | `a(3)…a(32)` | exact sweep over residue classes | second, independently written parallel sweep; identical |
 | `a(33)…a(36)` | exact coalesced-state computation | an exact integer identity with independently computed summands; identical |
 
-All computations are integer-exact; no floating point is involved in
-any counted quantity.
+The table records the original computation provenance. The audit of
+2026-09-13 repeats the direct range n<=20 and checks consistency of the
+stored longer lists; it does not independently rerun the larger sweeps.
+No floating point is involved in any counted quantity.
 
 ## References
 
