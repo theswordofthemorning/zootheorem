@@ -174,3 +174,70 @@ La misma informacion va ademas en la nota de discusion, que es su sitio.
 se referencian entre si: los dos entran juntos en cuanto se aprueben dos de
 los tres de arriba. Antes de enviarlos hay que arreglarles el mismo link 404.
 
+
+---
+
+## NOTA PARA LA PROXIMA SESION (la deja Claude, 12-09-2026 ~20:40 EDT)
+
+Para quien abra esto despues — yo mismo, Astra, o quien sea. Estado exacto al
+cerrar, y que hacer al entrar.
+
+### Donde quedo todo
+
+- **Slots: 3/3 ocupados.** A399819, A399820 y A399821 en `proposed`, enviados
+  esta noche con nota de discusion. Nadie los ha mirado todavia.
+- **Publicadas: 7 en total si aprueban estas** — A398792, A398793, A398794 y
+  A398795 ya estan aprobadas y visibles en busquedas.
+- **Recamara: 2 borradores**, `A398XXX1.txt` (`G(n)`) y `A398XXX2.txt`
+  (`H(n)`). Se referencian entre si: entran **juntos**, no sueltos.
+- El texto exacto que se envio a OEIS esta en `A399819.txt`, `A399820.txt` y
+  `A399821.txt`, verbatim. Si un editor pide un cambio, cambiar el archivo
+  tambien, para que el repo no mienta.
+
+### Lo primero al entrar: mirar si hay comentario de editor
+
+`https://oeis.org/draft?user=Omar%20Said`. **Un comentario de editor devuelve
+el draft a `editing` y ahi se congela hasta que el autor re-propone**; nadie lo
+vuelve a mirar solo. Si hay caja rosa: contestar y re-proponer **la misma
+noche** (es lo que se hizo en las dos rondas anteriores y funciono). Si pasan
+~2 semanas sin nada: empujon cortes en la caja de discusion, **no** re-proponer.
+
+### Tres cosas pendientes, por orden de importancia
+
+1. **Decidir el comentario «Checked against OEIS on Sep 12 2026...»** que quedo
+   publicado en las tres entradas. Es metadato del proceso, no del objeto
+   matematico. Se dejo porque el autor pidio no revisar, pero es el tipo de
+   linea que un editor pide quitar y eso cuesta una ronda entera. Si se decide
+   quitarlo, hacerlo **antes** de que lo pida un editor, y quitarlo tambien de
+   `A398XXX1.txt` y `A398XXX2.txt`, que lo llevan igual.
+2. **Los scripts citados no existen en publico.** `estratoscadena.py` e
+   `identidadexacta.py` no estan en ningun repo publico de la cuenta — el link
+   a `conjeturadecollazpython` daba 404 y por eso se quito. **Los dos
+   borradores en recamara todavia lo llevan**: hay que quitarselo o subir los
+   scripts a `zootheorem` antes de enviarlos. Regla nueva de la casa:
+   **comprobar que cada `%H` responde 200 antes de enviar nada.**
+3. **Los b-files.** Ninguna de las tres enviadas lleva b-file, y ARSENAL dice
+   que la regla de la casa es mandarlo. 20 terminos caben en las tres lineas
+   de `%S/%T/%U`, asi que no es obligatorio, pero si `flecosr.py` o
+   `estratoscadena.py` extienden las series, un b-file es la mejor forma de
+   subir la calidad de la entrada sin tocar el texto.
+
+### Y cuando se libere un slot
+
+Entra **G + H juntos** (`A398XXX1.txt` + `A398XXX2.txt`), con el link 404 ya
+arreglado. Despues, del cargador de reserva, la mejor historia editorial sigue
+siendo la **#1** (primeros retornos a gap 1: extiende las tablas de LaTourette
+2007 y corrige su L11, con la errata ya comunicada a Moravian).
+
+### Como se hace el envio, en concreto (para no redescubrirlo)
+
+1. `https://oeis.org/edit/allocate` -> pedir N numeros. Caducan en ~1 mes.
+2. `https://oeis.org/edit?seq=AXXXXXX&internal=1` -> **una sola caja de texto
+   con el registro entero en formato `%`**. Es mucho mas comodo que el
+   formulario por campos. Conservar la primera linea (`%I #n fecha`) y escribir
+   el resto debajo. `Save Changes` -> queda en `editing`.
+3. En `https://oeis.org/draft/AXXXXXX`, escribir la nota en la caja de
+   discusion **y solo entonces** pulsar «These changes are ready for review».
+   La nota se adjunta al pulsar el boton, no antes.
+4. Recordar: el `%O` es `offset,posicion del primer termino con |a| >= 2`.
+   Es el error de formato mas facil de cometer.
