@@ -1,4 +1,4 @@
-# Current plan — 2026-09-13
+# Current plan — 2026-09-17
 
 **Target:** `phi=lim a(n)/2^n=1`, where a(n) counts balanced merging
 classes by step n for T=A014682. For their union F,
@@ -31,10 +31,13 @@ separate survival, exit and censoring, and include signed and adversarial starts
 
 ## Publication handoff
 
-A398792–A398795 are published. A399819–A399821 were last observed
-**proposed** after resubmission on 13-09; approval remains unconfirmed.
-Local text, offsets, ranges and the prepared but unposted A398792
-clarification: [revision note](drafts/REVISION_20260913.md).
+A398792–A398795 are published. A399819–A399821 were observed
+**proposed** after clarification and resubmission on 17-09 (revisions
+#10, #9, #9). Irvine was answered in A399819; companion notes were posted.
+Approval remains pending. Definitions, the density motivation and the
+Elia–Tucker example are documented in [the reply record](drafts/REVISION_20260917.md).
+The prepared A398792 clarification remains unposted; see
+[the earlier audit](drafts/REVISION_20260913.md).
 OEIS acceptance does not establish the asymptotic argument.
 
 Keep this plan short: replace outdated status and link detailed work.

@@ -1,9 +1,14 @@
-%I #5 Sep 13 2026 01:16:59
+%I #9 Sep 17 2026 16:34:25
 %S 1,4,12,30,65,131,247,447,761,1242,1953,3003,4485,6570,9410,13204,18164,24596,32753
 %N Number of new Collatz merging classes at level n with exactly 10 mixed-parity steps.
-%C Let T be the Collatz map (A014682): T(x) = x/2 if x is even, T(x) = (3*x+1)/2 if x is odd. A new merging class at level n is a residue class modulo 2^n for which the pair (r,r+1) merges at step n with equal odd count and is not inherited from a merging class at level n-1.
-%C This sequence counts the new classes whose two trajectories have opposite parity at exactly 10 of the n steps. The first nonzero term is for n = 11.
-%C This is the next stratum after A399819.
+%C Let T be the Collatz map (A014682): T(x) = x/2 for even x and (3*x+1)/2 for odd x. Iterate T simultaneously from r and r+1, for each integer r with 0 <= r < 2^n.
+%C Count r if the two trajectories first meet after exactly n iterations, have the same number of odd inputs among these n iterations, and have opposite input parities at exactly 10 of them. An iteration with opposite input parities is called a mixed-parity step; steps are numbered 1 through n, including the meeting step.
+%C The first nonzero term is at n = 11. The sequences A399819, A399820 and A399821 count the cases with 8, 10 and 12 mixed-parity steps, respectively.
+%C The equal odd counts ensure that the meeting holds for the entire residue class modulo 2^n: if each path has s odd inputs, replacing r by r + 2^n*m adds 3^s*m to both values at step n. Thus each counted r represents an infinite family of consecutive pairs, not just one numerical coincidence.
+%C These sequences refine A398793 by the number of mixed-parity steps. If e_j(n) denotes the same count with j mixed-parity steps, then sum_j e_j(n) = A398793(n-1) = A398792(n) - 2*A398792(n-1), for n >= 2. Only even j can occur, since equal odd counts require equally many mixed steps of each orientation.
+%C This decomposition records how different parity patterns contribute to the density of merging consecutive pairs, in connection with the question studied by Gao. The quantity e_j(n)/2^n is the density added at level n by that part of the count. Proving lim A398792(n)/2^n = 1 remains an open objective; the three fixed values j = 8, 10, 12 alone do not settle it.
+%C The counts require only finite trajectories and do not assume the Collatz conjecture. For lifted pairs r + 2^n*m, r + 2^n*m + 1 with m >= 1, equal finite total stopping times follow if their common trajectory reaches 1.
+%D G.-G. Gao, On consecutive numbers of the same height in the Collatz problem, Discrete Mathematics 112 (1993), 261-267.
 %H Omar Said, <a href="https://github.com/theswordofthemorning/zootheorem">Statements, proofs, sequence data and verification scripts</a>
 %e a(11) = 1: the unique class is r = 769 modulo 2048. The trajectories starting at 769 and 770 first meet at 92 after 11 iterations of T. Each has five odd inputs to these iterations, and their inputs have opposite parity at steps 1 through 9 and at step 11.
 %o (Python)

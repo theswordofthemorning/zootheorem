@@ -1,20 +1,22 @@
-# OEIS: working checklist — 13-09-2026
+# OEIS: working checklist — 17-09-2026
 
 Use this file only for OEIS work. Research continues from
 [PLAN_INVESTIGACION.md](../PLAN_INVESTIGACION.md).
 
 ## Last recorded state
 
-| Entry | State observed 13-09 | Data indices | Full offset |
+| Entry | State observed 17-09 | Data indices | Full offset |
 |---|---|---|---|
 | A398792–A398795 | Published | See entries | — |
 | A399819 (e8) | Proposed | 9..29 | 9,2 |
 | A399820 (e10) | Proposed | 11..29 | 11,2 |
 | A399821 (e12) | Proposed | 13..29 | 13,2 |
 
-Details and witnesses: [REVISION_20260913.md](REVISION_20260913.md).
+Irvine answered; comments clarified and all three resubmitted on 17-09.
+Reply and verification: [REVISION_20260917.md](REVISION_20260917.md).
+Offsets and historical verification: [REVISION_20260913.md](REVISION_20260913.md).
 The A398792 convergence clarification is prepared there but unposted.
-The new data/verifier files are local until published to the remote.
+The 17-09 editorial synchronization is local; no GitHub push in this session.
 G,H remain reserve placeholders in A398XXX1.txt and A398XXX2.txt.
 
 ## Before an authorized submission
