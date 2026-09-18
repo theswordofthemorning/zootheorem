@@ -12,11 +12,14 @@ Use this file only for OEIS work. Research continues from
 | A399820 (e10) | Proposed | 11..29 | 11,2 |
 | A399821 (e12) | Proposed | 13..29 | 13,2 |
 
-Irvine answered; comments clarified and all three resubmitted on 17-09.
-Reply and verification: [REVISION_20260917.md](REVISION_20260917.md).
+Irvine was answered earlier; Howroyd and Marcus were answered at 20:10
+and 20:11 EDT on 17-09. All three resubmitted, revisions #12/#13/#11.
+Reply and verification: [REVISION_20260917_TARDE.md](REVISION_20260917_TARDE.md).
 Offsets and historical verification: [REVISION_20260913.md](REVISION_20260913.md).
-The A398792 convergence clarification is prepared there but unposted.
-The 17-09 editorial synchronization is local; no GitHub push in this session.
+[Corrections for A398792–A398795](CORRECCIONES_PUBLICADAS_20260917.md)
+are prepared but unposted: OEIS's three-active-edit limit blocked A398792.
+Submit when a slot becomes available. The user requested commit and push
+of this review and its operating instructions at the end of the session.
 G,H remain reserve placeholders in A398XXX1.txt and A398XXX2.txt.
 
 ## Before an authorized submission
@@ -35,6 +38,8 @@ G,H remain reserve placeholders in A398XXX1.txt and A398XXX2.txt.
    duplicates on submission day; do not add historical “no results” comments.
 6. Answer the specific editor questions. If the draft returned to editing,
    re-propose after the response and verify the resulting state.
+   Use [the save/reply/propose procedure](PROCEDIMIENTO_OEIS.md), including
+   Chrome UIA checks and the distinction between saving and resubmitting.
 
 Historical rounds, correspondence and earlier procedures are preserved
 in [the complete arsenal](../archivo/contexto_20260913/drafts__ARSENAL.md.txt).

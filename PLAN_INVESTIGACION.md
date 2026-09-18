@@ -10,7 +10,7 @@ control of first arrival at 1. This is not a proof of Collatz.
 
 | Step | Status and completion criterion |
 |---|---|
-| P0: coherence | Local corrections and verifiers completed; remote publication pending |
+| P0: coherence | Repository corrections and verifiers completed; four OEIS corrections prepared, pending an edit slot |
 | **P1: full clock, next** | Add k=0,1 boundary segments to the interior excursion bound; specify entrance, exit and restart times and prove a global bound |
 | P2: exit window | For `u_tau=Pi_tau*u0+W_tau`, u0=c/9, prove `P(abs(W_tau)<=M given tau>T(c))>=p>0` uniformly on a declared domain, with fixed M and declared logarithmic horizon; or exhibit a family refuting uniformity |
 | P3: absorption | Control actual starts and prove divergence of conditional success probabilities; justify strong Markov and conditional Borel–Cantelli without circularity |
@@ -31,15 +31,20 @@ separate survival, exit and censoring, and include signed and adversarial starts
 
 ## Publication handoff
 
-A398792–A398795 are published. A399819–A399821 were observed
-**proposed** after clarification and resubmission on 17-09 (revisions
-#10, #9, #9). Irvine was answered in A399819; companion notes were posted.
-Approval remains pending. Definitions, the density motivation and the
-Elia–Tucker example are documented in [the reply record](drafts/REVISION_20260917.md).
-The prepared A398792 clarification remains unposted; see
-[the earlier audit](drafts/REVISION_20260913.md).
+A398792–A398795 are published. A399819–A399821 were checked **proposed**
+after the 17-09 afternoon replies to Howroyd and Marcus, revisions
+#12, #13, #11. Direct titles, local definitions and article links were
+added; data, offsets, examples and programs were preserved. Approval is
+pending. [Analysis and delivery](drafts/REVISION_20260917_TARDE.md).
+[Corrections to the four published entries](drafts/CORRECCIONES_PUBLICADAS_20260917.md)
+are prepared but unsubmitted: OEIS refused to open A398792 because the
+account has three active edits. They concern density qualifications,
+the ratio argument, the Conejas meeting value and the shared-step law.
+Submit when a slot becomes available; no pending draft was withdrawn.
 OEIS acceptance does not establish the asymptotic argument.
 
 Keep this plan short: replace outdated status and link detailed work.
 The [previous full plan](archivo/contexto_20260913/PLAN_INVESTIGACION.md.txt)
-is preserved for lookup. Current changes are local, without commit/push.
+is preserved for lookup. Both repos matched origin/main at session start.
+The user requested commit and push to close this review. Future OEIS work
+uses [the documented submission procedure](drafts/PROCEDIMIENTO_OEIS.md).

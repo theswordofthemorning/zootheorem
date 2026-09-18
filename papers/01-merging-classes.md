@@ -123,8 +123,10 @@ No floating point is involved in any counted quantity.
   of the same height in the Collatz conjecture*, Mathematica Applicata
   (Wuhan) 14 (2001), suppl., 21–25. MR 1885838. (The class
   `r = 5 mod 32` here is their family `(32m+5, 32m+6)`.)
-- M. Elia and C. Tucker, INTEGERS 15 (2015), #A54.
-- D. Barina, *Convergence verification of the Collatz problem*,
-  J. Supercomputing (2025). (Source of the `2^71` bound.)
+- M. Elia and A. Tucker, [*Consecutive Integers and the Collatz
+  Conjecture*](https://arxiv.org/abs/1511.09141), INTEGERS 15 (2015), #A54.
+- D. Barina, [*Improved verification limit for the convergence of the
+  Collatz conjecture*](https://doi.org/10.1007/s11227-025-07337-0),
+  J. Supercomputing 81 (2025), 810. (Source of the `2^71` bound.)
 - Related OEIS entries: A014682 (the map `T` itself), A076227
   (surviving Collatz residues mod 2^n), A006877, A100982.
