@@ -1,16 +1,25 @@
-# OEIS: working checklist — 17-09-2026
+# OEIS: working checklist — 24-09-2026
 
 Use this file only for OEIS work. Research continues from
 [PLAN_INVESTIGACION.md](../PLAN_INVESTIGACION.md).
 
 ## Last recorded state
 
-| Entry | State observed 17-09 | Data indices | Full offset |
+| Entry | State observed 24-09 | Data indices | Full offset |
 |---|---|---|---|
-| A398792–A398795 | Published | See entries | — |
-| A399819 (e8) | Proposed | 9..29 | 9,2 |
-| A399820 (e10) | Proposed | 11..29 | 11,2 |
-| A399821 (e12) | Proposed | 13..29 | 13,2 |
+| A398792–A398795 | Published, unchanged | See entries | — |
+| e8 (was A399819) | **Rejected 24-09, number recycled** | 9..29 | 9,2 |
+| e10 (was A399820) | **Rejected 24-09, number recycled** | 11..29 | 11,2 |
+| e12 (was A399821) | **Rejected 24-09, number recycled** | 13..29 | 13,2 |
+
+Sean A. Irvine rejected the three on 24-09: NOGI, and in A399821 "the
+presence of arbitrary constraints like 'exactly 12 positions' detract
+from its general value". The numbers went back to the OEIS pool and will
+be reassigned, so they must not be cited anywhere, including the names of
+`seqs/b39981*.txt` and `seqs/b39982*.txt`, which still hold valid data
+under a dead name. Full record: the laboratory's
+`depuracion/oeis20260924/LEEME.md`. The data, offsets, examples and
+programs were never disputed.
 
 Irvine was answered earlier; Howroyd and Marcus were answered at 20:10
 and 20:11 EDT on 17-09. All three resubmitted, revisions #12/#13/#11.

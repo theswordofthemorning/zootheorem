@@ -31,15 +31,20 @@ separate survival, exit and censoring, and include signed and adversarial starts
 
 ## Publication handoff
 
-A398792–A398795 are published. A399819–A399821 were checked **proposed**
-after the 17-09 afternoon replies to Howroyd and Marcus, revisions
-#12, #13, #11. Direct titles, local definitions and article links were
-added; data, offsets, examples and programs were preserved. Approval is
-pending. [Analysis and delivery](drafts/REVISION_20260917_TARDE.md).
+A398792–A398795 are published and unchanged. A399819–A399821 were
+**rejected on 24-09** by Sean A. Irvine (NOGI, insufficient general
+interest; the objection named is the arbitrary fixed count of
+opposite-parity positions) and their numbers were recycled, so they will
+be reassigned and must not be cited. The 17-09 replies to Howroyd and
+Marcus fixed the exposition, not that objection.
+[Analysis and delivery](drafts/REVISION_20260917_TARDE.md).
+No number, offset, example or program was disputed: the strata data and
+their verifiers remain valid as own material without an A-number.
 [Corrections to the four published entries](drafts/CORRECCIONES_PUBLICADAS_20260917.md)
 are prepared but unsubmitted: OEIS refused to open A398792 because the
-account has three active edits. They concern density qualifications,
-the ratio argument, the Conejas meeting value and the shared-step law.
+account had three active edits, a limit now free after the rejections.
+They concern density qualifications, the ratio argument, the Conejas
+meeting value and the shared-step law.
 Submit when a slot becomes available; no pending draft was withdrawn.
 OEIS acceptance does not establish the asymptotic argument.
 
