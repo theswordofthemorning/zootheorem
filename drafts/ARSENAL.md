@@ -11,6 +11,7 @@ Use this file only for OEIS work. Research continues from
 | e8 (was A399819) | **Rejected 24-09, number recycled** | 9..29 | 9,2 |
 | e10 (was A399820) | **Rejected 24-09, number recycled** | 11..29 | 11,2 |
 | e12 (was A399821) | **Rejected 24-09, number recycled** | 13..29 | 13,2 |
+| Meeting time of A078417 pairs | **Ready, not submitted**; user submits 25-09 | 1..10000 (b-file) | 1,1 |
 
 Sean A. Irvine rejected the three on 24-09: NOGI, and in A399821 "the
 presence of arbitrary constraints like 'exactly 12 positions' detract
@@ -30,6 +31,9 @@ are prepared but unposted: OEIS's three-active-edit limit blocked A398792.
 Submit when a slot becomes available. The user requested commit and push
 of this review and its operating instructions at the end of the session.
 G,H remain reserve placeholders in A398XXX1.txt and A398XXX2.txt.
+Single proposal for 25-09, text ready to paste and duplicate search done:
+[PROPUESTA_ENCUENTRO_20260924.md](PROPUESTA_ENCUENTRO_20260924.md).
+Upload `seqs/bfile_meeting_equal_height_3x1.txt` as bNNNNNN.txt once allocated.
 
 ## Before an authorized submission
 

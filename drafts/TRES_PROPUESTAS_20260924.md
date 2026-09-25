@@ -1,5 +1,11 @@
 # Tres propuestas para los tres slots — 24-09-2026
 
+> **Nota de la noche del 24-09:** la Propuesta 1 queda sustituida por
+> [PROPUESTA_ENCUENTRO_20260924.md](PROPUESTA_ENCUENTRO_20260924.md):
+> con A014682 contaba como encuentros los que ocurren en el ciclo 1 -> 2
+> (7 y 8 en el paso 10). Se propone una sola secuencia; el resto se conserva
+> como estaba.
+
 **No enviadas.** Requieren autorización expresa.
 
 ## El argumento que faltaba (y que cambia todo)
